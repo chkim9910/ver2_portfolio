@@ -26,12 +26,12 @@ const Box = styled.div`
     /* align-items: center; */
   }
   .name {
-    font-weight: 300;
+    font-weight: 400;
     /* font-weight: 700; */
     color: white;
     font-size: 116px;
     line-height: 110px;
-    letter-spacing: -5px;
+    letter-spacing: -2px;
     /* letter-spacing: -1px; */
   }
   .line {
@@ -84,7 +84,7 @@ const GnbBox = styled.div`
     height: 90px;
     /* height: 100px; */
     text-align: right;
-    font-size: 75px;
+    font-size: 78px;
     /* font-size: 86px; */
     font-weight: 700;
     color: transparent;
