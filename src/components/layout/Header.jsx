@@ -7,7 +7,7 @@ import { useState } from "react";
 
 const Box = styled.div`
   padding: 0 3.333vw;
-  padding-top: 60px;
+  padding-top: 30px;
   z-index: 100;
   top: 0;
   left: 0;
@@ -26,6 +26,7 @@ const Inner = styled.div`
   }
   .logo-img.white {
     background-image: url(${logoWhite});
+    transition: all 0.6s ease-in-out;
   }
 `;
 const Input = styled.input`

@@ -30,6 +30,14 @@ const CustomStyles = createGlobalStyle`
     font-weight: 400;
     text-transform: uppercase;
   }
+  .font-made{
+    font-family: "MADE Evolve Sans", sans-serif;
+    font-weight: 400;
+  }
+  .font-made-upper{
+    font-family: "MADE Evolve Sans", sans-serif;
+    text-transform: uppercase;
+  }
 `;
 
 const GlobalStyles = () => (
