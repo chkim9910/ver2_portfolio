@@ -197,7 +197,7 @@ export default function Gnb(props) {
                 </a>
               </li>
               <li>
-                <a href="/">
+                <a href="/" download="resume.pdf">
                   RESUME
                   <span className="arr-icon">
                     <MdArrowOutward />
