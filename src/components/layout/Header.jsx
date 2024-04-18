@@ -90,7 +90,7 @@ export default function Header() {
             <Line className="line" isOpen={isOpen}></Line>
           </Label>
         </Inner>
-        <Gnb isOpen={isOpen} />
+        <Gnb isOpen={isOpen} setIsOpen={setIsOpen} />
       </Box>
     </>
   );

@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { useRef } from "react";
 import { IoLogoGithub } from "react-icons/io";
 import { MdArrowOutward } from "react-icons/md";
 
@@ -15,12 +16,17 @@ const Box = styled.div`
   align-items: center;
   justify-content: space-between;
   .inner {
+    height: 490px;
     width: 100%;
+    position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: flex-end;
   }
   .left {
+    position: absolute;
+    left: 0;
+    top: 0;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -136,9 +142,13 @@ const GnbBox = styled.div`
 `;
 
 export default function Gnb(props) {
+  const gnb = useRef(null);
+  const closed = () => {
+    props.setIsOpen(false);
+  };
   return (
     <>
-      <Box className="gnb" isOpen={props.isOpen}>
+      <Box className="gnb" isOpen={props.isOpen} ref={gnb}>
         <div className="inner">
           <div className="left">
             <h2 className="font-made-upper name">
@@ -166,22 +176,22 @@ export default function Gnb(props) {
               </a>
             </div>
           </div>
-          <GnbBox className="right">
+          <GnbBox className="right" onClick={closed}>
             <ul className="font-made-upper">
               <li>
-                <a href="/about">
+                <a href="#about">
                   <span>01</span>
                   <span className="inner-line"></span>ABOUT
                 </a>
               </li>
               <li>
-                <a href="/project">
+                <a href="#project">
                   <span>02</span>
                   <span className="inner-line"></span>PROJECT
                 </a>
               </li>
               <li>
-                <a href="/contact">
+                <a href="#contact">
                   <span>03</span>
                   <span className="inner-line"></span>CONTACT
                 </a>
