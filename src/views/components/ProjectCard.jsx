@@ -9,7 +9,7 @@ const Inner = styled.div`
   position: relative;
   top: 0;
   transition: all 0.3s;
-  will-change: transform;
+  /* will-change: transform; */
   &:hover {
     top: -20px;
   }

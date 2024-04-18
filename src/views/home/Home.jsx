@@ -1,5 +1,8 @@
 import styled from "@emotion/styled";
 import { IoLogoGithub } from "react-icons/io";
+import { GrDownload } from "react-icons/gr";
+import { SiMinutemailer } from "react-icons/si";
+import { SiKakaotalk } from "react-icons/si";
 import arr from "../../assets/images/comm/arrow.png";
 import illust from "../../assets/images/landing-page/illust.png";
 import x2y2 from "../../assets/images//landing-page/x2y2_mockup.jpg";
@@ -29,6 +32,12 @@ const Wrap = styled.div`
     justify-content: center;
     align-items: center;
   }
+  .section3 {
+    margin-top: 120px;
+  }
+  .section4 {
+    margin-top: 120px;
+  }
   .num {
     display: flex;
     align-items: center;
@@ -42,6 +51,9 @@ const Wrap = styled.div`
     width: 140px;
     height: 1px;
     background: var(--primary);
+  }
+  footer {
+    width: 100%;
   }
 `;
 const TopBox = styled.div`
@@ -203,6 +215,83 @@ const Sect3Inner = styled.div`
     width: 85%;
   }
 `;
+const Sect4Inner = styled.div`
+  position: relative;
+  left: -3.333vw;
+  width: 110%;
+  .inner-box {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    color: white;
+    background: var(--primary);
+    padding: 120px 10%;
+  }
+  .title {
+    font-size: 56px;
+    font-weight: 500;
+    height: 80px;
+  }
+  .sub-title {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  .pdf-box {
+    width: 184px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+  }
+  .pdf-text {
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .download-icon {
+    font-size: 20px;
+  }
+`;
+const Sect5Inner = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 260px;
+  .sub-text {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .main-text {
+    font-size: 70px;
+    height: 100px;
+  }
+  .addr,
+  .kakao {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "MADE Evolve Sans", sans-serif;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    position: relative;
+    top: 0;
+    transition: all 0.3s;
+  }
+  .addr:hover,
+  .kakao:hover {
+    color: var(--primary);
+  }
+`;
+const FooterInner = styled.div`
+  margin-top: 120px;
+  padding-bottom: 60px;
+  width: 100%;
+  .copyright {
+    font-size: 14px;
+    font-weight: 400;
+  }
+`;
 
 export default function Home() {
   return (
@@ -356,9 +445,54 @@ export default function Home() {
           </Sect3Inner>
         </section>
         {/* section4 */}
-        <section className="section4"></section>
+        <section className="section4">
+          <Sect4Inner className="inner">
+            <div className="inner-box">
+              <div className="text-box">
+                <h2 className="title">resume</h2>
+                <p className="sub-title">더 많은 정보를 확인해보세요.</p>
+              </div>
+              <a href="/" download="resume.pdf" className="pdf-box">
+                <span className="pdf-text">PDF Download</span>
+                <span className="download-icon">
+                  <GrDownload />
+                </span>
+              </a>
+            </div>
+          </Sect4Inner>
+        </section>
         {/* section5 */}
-        <section className="section5" id="contact"></section>
+        <section className="section5" id="contact">
+          <Sect5Inner className="inner">
+            <p className="title sub-text">let’s work together!</p>
+            <h3 className="title main-text">get in touch</h3>
+            <a href="mailto:chohyang9910@gmail.com" className="addr">
+              chohyang9910@gmail.com
+              <span>
+                <SiMinutemailer />
+              </span>
+            </a>
+            <a
+              href="https://open.kakao.com/me/chohyang"
+              className="kakao"
+              target="_blank"
+              rel="noreferrer"
+            >
+              kakaotalk open chat
+              <span>
+                <SiKakaotalk />
+              </span>
+            </a>
+          </Sect5Inner>
+        </section>
+        {/* footer */}
+        <footer>
+          <FooterInner className="inner">
+            <p className="title copyright">
+              Copyright 2024 - chohyang kim, All rights reserved.
+            </p>
+          </FooterInner>
+        </footer>
       </Wrap>
     </>
   );
