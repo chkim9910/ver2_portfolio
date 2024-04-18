@@ -8,10 +8,14 @@ const Inner = styled.div`
   font-family: "Noto Sans KR", sans-serif;
   position: relative;
   top: 0;
-  transition: top 0.3s;
+  transition: all 0.3s;
   will-change: transform;
   &:hover {
     top: -20px;
+  }
+  &:active {
+    top: -20px;
+    transform: scale(0.95);
   }
   .inner {
     display: flex;
