@@ -12,7 +12,7 @@ import kawa from "../../assets/images//landing-page/동물자ᄋ�
 import Desc from "../../components/Desc";
 import DescLine from "../../components/DescLine";
 import DescLineInner from "../../components/DescLineInner";
-import ProjectCard from "../components/ProjectCard";
+import ProjectCard from "./components/ProjectCard";
 
 const Wrap = styled.div`
   display: flex;
@@ -431,7 +431,7 @@ export default function Home() {
               <ProjectCard name="X2Y2" img={x2y2}>
                 responsive website
               </ProjectCard>
-              <ProjectCard name="CHANNEL 22 BAG" img={chanel}>
+              <ProjectCard name="CHANEL 22 BAG" img={chanel}>
                 responsive website
               </ProjectCard>
             </div>

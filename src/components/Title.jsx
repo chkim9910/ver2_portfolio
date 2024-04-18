@@ -26,3 +26,56 @@ export default function Title(props) {
     </>
   );
 }
+
+const SubpageInner = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 772px;
+  .inner {
+    width: fit-content;
+  }
+  .top {
+    font-size: 24px;
+    letter-spacing: 15px;
+  }
+  .title {
+    font-size: 100px;
+    /* font-weight: 300; */
+    font-weight: ${(props) => (props.light ? 300 : 400)};
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    /* height: 130px; */
+  }
+  .highlight {
+    font-weight: 500;
+  }
+  .bottom {
+    font-size: 24px;
+    letter-spacing: 20px;
+    /* width: 100%; */
+    display: flex;
+    justify-content: flex-end;
+    transform: translateX(13px);
+  }
+`;
+
+export function SubpageTitle(props) {
+  return (
+    <>
+      <SubpageInner className="title-box" light={props.light}>
+        <div className="inner">
+          <span className="top">RESPONSIVE</span>
+          <p className="title">
+            <span className="highlight">{props.highlight}</span>
+            {props.children}
+          </p>
+          <span className="bottom">WEBSITE</span>
+        </div>
+      </SubpageInner>
+    </>
+  );
+}
