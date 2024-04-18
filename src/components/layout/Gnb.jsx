@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { IoLogoGithub } from "react-icons/io";
+import { MdArrowOutward } from "react-icons/md";
 
 const Box = styled.div`
   background: var(--primary);
@@ -127,6 +128,11 @@ const GnbBox = styled.div`
     transform: scale(1);
     width: 240px;
   }
+  .arr-icon {
+    color: white;
+    font-size: 48px;
+    padding-bottom: 28px;
+  }
 `;
 
 export default function Gnb(props) {
@@ -181,7 +187,12 @@ export default function Gnb(props) {
                 </a>
               </li>
               <li>
-                <a href="/">RESUME</a>
+                <a href="/">
+                  RESUME
+                  <span className="arr-icon">
+                    <MdArrowOutward />
+                  </span>
+                </a>
               </li>
             </ul>
           </GnbBox>
