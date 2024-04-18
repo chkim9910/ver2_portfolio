@@ -2,9 +2,14 @@ import styled from "@emotion/styled";
 import { IoLogoGithub } from "react-icons/io";
 import arr from "../../assets/images/comm/arrow.png";
 import illust from "../../assets/images/landing-page/illust.png";
+import x2y2 from "../../assets/images//landing-page/x2y2_mockup.jpg";
+import chanel from "../../assets/images//landing-page/chanel_mockup.jpg";
+import knb from "../../assets/images//landing-page/국립발레단_mockup.jpg";
+import kawa from "../../assets/images//landing-page/동물자유연대_mockup.jpg";
 import Desc from "../../components/Desc";
 import DescLine from "../../components/DescLine";
 import DescLineInner from "../../components/DescLineInner";
+import ProjectCard from "../components/ProjectCard";
 
 const Wrap = styled.div`
   display: flex;
@@ -14,9 +19,11 @@ const Wrap = styled.div`
   section {
     width: 100%;
     position: relative;
+    padding-top: 150px;
   }
   .section1 {
     height: 100svh;
+    padding-top: 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,9 +42,6 @@ const Wrap = styled.div`
     width: 140px;
     height: 1px;
     background: var(--primary);
-  }
-  .section2 {
-    padding-top: 120px;
   }
 `;
 const TopBox = styled.div`
@@ -185,6 +189,20 @@ const Sect2IllustBox = styled.div`
     right: 40px;
   }
 `;
+const Sect3Inner = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 120px;
+  .inner {
+    display: flex;
+    gap: 40px;
+    width: 85%;
+  }
+`;
 
 export default function Home() {
   return (
@@ -318,6 +336,24 @@ export default function Home() {
             <p>02</p>
             <span className="num-line"></span>
           </div>
+          <Sect3Inner className="project-box">
+            <div className="inner">
+              <ProjectCard name="X2Y2" img={x2y2}>
+                responsive website
+              </ProjectCard>
+              <ProjectCard name="CHANNEL 22 BAG" img={chanel}>
+                responsive website
+              </ProjectCard>
+            </div>
+            <div className="inner">
+              <ProjectCard name="국립발레단" img={knb}>
+                responsive website
+              </ProjectCard>
+              <ProjectCard name="동물자유연대" img={kawa}>
+                responsive website
+              </ProjectCard>
+            </div>
+          </Sect3Inner>
         </section>
         {/* section4 */}
         <section className="section4"></section>
