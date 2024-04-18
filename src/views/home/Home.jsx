@@ -101,7 +101,8 @@ const BottomBox = styled.div`
   /* position: fixed; */
   bottom: 0;
   width: 100%;
-  padding: 0 3.333vw 30px;
+  padding-bottom: 30px;
+  /* padding: 0 3.333vw 30px; */
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -164,7 +165,7 @@ const Sect2Inner = styled.div`
 `;
 const Sect2IllustBox = styled.div`
   position: absolute;
-  top: 168px;
+  top: 198px;
   right: 0;
   width: 420px;
   .illust {
@@ -285,7 +286,7 @@ const Sect5Inner = styled.div`
 `;
 const FooterInner = styled.div`
   margin-top: 120px;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
   width: 100%;
   .copyright {
     font-size: 14px;
