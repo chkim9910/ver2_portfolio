@@ -2,12 +2,9 @@ import styled from "@emotion/styled";
 import { MdArrowForward } from "react-icons/md";
 
 const Inner = styled.div`
-  /* max-width: 600px; */
-  /* width: 600px; */
-  /* min-width: 580px; */
-  display: flex;
   max-height: 530px;
   flex: 1;
+  display: flex;
   font-family: "Noto Sans KR", sans-serif;
   position: relative;
   top: 0;
@@ -48,10 +45,8 @@ export default function ProjectCard(props) {
   return (
     <>
       <Inner img={props.img}>
-        <a href="/" className="inner">
-          <div className="img">
-            {/* <img src={props.img} alt="목업 이미지" height={"445px"} /> */}
-          </div>
+        <a href={"/" + props.name} className="inner">
+          <div className="img"></div>
           <div className="text-box">
             <div className="text-top">
               <h3 className="name">{props.name}</h3>
