@@ -40,6 +40,7 @@ const SubpageInner = styled.div`
   .top {
     font-size: 24px;
     letter-spacing: 15px;
+    font-weight: 400;
   }
   .title {
     font-size: 100px;
@@ -56,6 +57,7 @@ const SubpageInner = styled.div`
   .bottom {
     font-size: 24px;
     letter-spacing: 20px;
+    font-weight: 400;
     /* width: 100%; */
     display: flex;
     justify-content: flex-end;

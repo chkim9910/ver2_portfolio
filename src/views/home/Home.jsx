@@ -219,7 +219,7 @@ const Sect3Inner = styled.div`
 const Sect4Inner = styled.div`
   position: relative;
   left: -3.333vw;
-  width: 110%;
+  width: calc(100% + 6.666vw);
   .inner-box {
     display: flex;
     flex-direction: column;
