@@ -1,7 +1,9 @@
 import styled from "@emotion/styled";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { IoLogoGithub } from "react-icons/io";
 import { MdArrowOutward } from "react-icons/md";
+import { RefContext, useRefs } from "../../RefContext";
+import { useLocation } from "react-router-dom";
 
 const Box = styled.div`
   background: var(--primary);
@@ -142,13 +144,106 @@ const GnbBox = styled.div`
 `;
 
 export default function Gnb(props) {
+  const { aboutRef, projectRef, contactRef } = useRefs(RefContext);
+  const location = useLocation();
+
+  const isMainPage = location.pathname === "/";
+
+  const scrollToSection = (ref) => {
+    if (ref && ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
+  // about 클릭 함수
+  const handleAboutClick = () => {
+    if (isMainPage) {
+      scrollToSection(aboutRef);
+    } else {
+      window.location.href = "/#about";
+    }
+  };
+  useEffect(() => {
+    // 페이지가 로드된 후 실행될 함수
+    const handleLoad = () => {
+      if (window.location.hash === "#about" && aboutRef.current) {
+        aboutRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+
+    // 페이지 로드 이벤트 리스너 등록
+    window.addEventListener("load", handleLoad);
+
+    // 컴포넌트가 언마운트될 때 이벤트 리스너 제거
+    return () => {
+      window.removeEventListener("load", handleLoad);
+    };
+  }, [aboutRef]);
+
+  // project 클릭 함수
+  const handleProjectClick = () => {
+    if (isMainPage) {
+      scrollToSection(projectRef);
+    } else {
+      window.location.href = "/#project";
+    }
+  };
+  useEffect(() => {
+    // 페이지가 로드된 후 실행될 함수
+    const handleLoad = () => {
+      if (window.location.hash === "#project" && projectRef.current) {
+        projectRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+
+    // 페이지 로드 이벤트 리스너 등록
+    window.addEventListener("load", handleLoad);
+
+    // 컴포넌트가 언마운트될 때 이벤트 리스너 제거
+    return () => {
+      window.removeEventListener("load", handleLoad);
+    };
+  }, [projectRef]);
+
+  // contact 클릭 함수
+  const handleContactClick = () => {
+    if (isMainPage) {
+      scrollToSection(contactRef);
+    } else {
+      window.location.href = "/#contact";
+    }
+  };
+  useEffect(() => {
+    // 페이지가 로드된 후 실행될 함수
+    const handleLoad = () => {
+      if (window.location.hash === "#contact" && projectRef.current) {
+        contactRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+
+    // 페이지 로드 이벤트 리스너 등록
+    window.addEventListener("load", handleLoad);
+
+    // 컴포넌트가 언마운트될 때 이벤트 리스너 제거
+    return () => {
+      window.removeEventListener("load", handleLoad);
+    };
+  }, [contactRef]);
+
   const gnb = useRef(null);
   const closed = () => {
     props.setIsOpen(false);
   };
   return (
     <>
-      <Box className="gnb" isOpen={props.isOpen} ref={gnb}>
+      <Box
+        className="gnb"
+        isOpen={props.isOpen}
+        ref={gnb}
+        aboutRef={aboutRef}
+        projectRef={projectRef}
+        contactRef={contactRef}
+      >
         <div className="inner">
           <div className="left">
             <h2 className="font-made-upper name">
@@ -179,19 +274,37 @@ export default function Gnb(props) {
           <GnbBox className="right" onClick={closed}>
             <ul className="font-made-upper">
               <li>
-                <a href="#about">
+                <a
+                  href="/"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleAboutClick(); // 수정된 부분
+                  }}
+                >
                   <span>01</span>
                   <span className="inner-line"></span>ABOUT
                 </a>
               </li>
               <li>
-                <a href="#project">
+                <a
+                  href="/"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleProjectClick(); // 수정된 부분
+                  }}
+                >
                   <span>02</span>
                   <span className="inner-line"></span>PROJECT
                 </a>
               </li>
               <li>
-                <a href="#contact">
+                <a
+                  href="/"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleContactClick(); // 수정된 부분
+                  }}
+                >
                   <span>03</span>
                   <span className="inner-line"></span>CONTACT
                 </a>

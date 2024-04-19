@@ -13,6 +13,8 @@ import Desc from "../../components/Desc";
 import DescLine from "../../components/DescLine";
 import DescLineInner from "../../components/DescLineInner";
 import ProjectCard from "./components/ProjectCard";
+// import { useRef } from "react";
+import { useRefs } from "../../RefContext";
 
 const Wrap = styled.div`
   display: flex;
@@ -295,6 +297,10 @@ const FooterInner = styled.div`
 `;
 
 export default function Home() {
+  // const aboutRef = useRef(null);
+  // const projectRef = useRef(null);
+  // const contactRef = useRef(null);
+  const { aboutRef, projectRef, contactRef } = useRefs();
   return (
     <>
       <Wrap className="wrap">
@@ -338,7 +344,7 @@ export default function Home() {
           </BottomBox>
         </section>
         {/* section2 */}
-        <section className="section2" id="about">
+        <section className="section2" ref={aboutRef} id="about">
           <div className="num">
             <p>01</p>
             <span className="num-line"></span>
@@ -421,7 +427,7 @@ export default function Home() {
           </Sect2IllustBox>
         </section>
         {/* section3 */}
-        <section className="section3" id="project">
+        <section className="section3" ref={projectRef} id="project">
           <div className="num">
             <p>02</p>
             <span className="num-line"></span>
@@ -463,7 +469,7 @@ export default function Home() {
           </Sect4Inner>
         </section>
         {/* section5 */}
-        <section className="section5" id="contact">
+        <section className="section5" ref={contactRef} id="contact">
           <Sect5Inner className="inner">
             <p className="title sub-text">let’s work together!</p>
             <h3 className="title main-text">get in touch</h3>

@@ -4,6 +4,7 @@ import logoWhite from "../../assets/images/comm/logo-white.png";
 import tw from "twin.macro";
 import Gnb from "./Gnb";
 import { useState } from "react";
+import { RefContext, useRefs } from "../../RefContext";
 
 const Box = styled.div`
   padding: 0 3.333vw;
@@ -63,8 +64,9 @@ const Line = styled.div`
   }
 `;
 
-export default function Header() {
+export default function Header(props) {
   const [isOpen, setIsOpen] = useState(false);
+  const { aboutRef, projectRef, contactRef } = useRefs(RefContext);
 
   return (
     <>
@@ -90,7 +92,13 @@ export default function Header() {
             <Line className="line" isOpen={isOpen}></Line>
           </Label>
         </Inner>
-        <Gnb isOpen={isOpen} setIsOpen={setIsOpen} />
+        <Gnb
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          aboutRef={aboutRef}
+          projectRef={projectRef}
+          contactRef={contactRef}
+        />
       </Box>
     </>
   );
