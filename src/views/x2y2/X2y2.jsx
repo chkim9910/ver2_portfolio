@@ -22,6 +22,9 @@ const Inner = styled.div`
     flex-direction: column;
     gap: 8px;
   }
+  .intro-desc {
+    margin-top: 16px;
+  }
   .link {
     display: flex;
     justify-content: space-between;
@@ -37,6 +40,7 @@ const Inner = styled.div`
   }
 `;
 const LinkInner = styled.div`
+  width: 100%;
   margin-top: 16px;
   display: flex;
   .link-to-page {
@@ -124,7 +128,7 @@ export default function X2y2() {
                 </a>
               </li>
             </ul>
-            <p>
+            <p className="intro-desc">
               국내 NFT 사이트 x2y2를 리다지인한 개인 프로젝트입니다.
               <br /> 정보성 사이트의 지루하고 복잡한 느낌을 없애기 위해 효율적인
               접근성을 고려하여 UI 요소를 배치하였고, 심플 모던한 레이아웃을
@@ -164,7 +168,7 @@ export default function X2y2() {
             <img src={designGuide} alt="x2y2 design system" width={"850px"} />
           </Desc>
           <Desc title="demo video"></Desc>
-          <Desc title="link to page" className="link-to-page">
+          <DescLine title="link to page">
             <LinkInner className="inner">
               <a
                 href="https://chkim9910.github.io/x2y2-Renewal"
@@ -200,7 +204,7 @@ export default function X2y2() {
                 </span>
               </a>
             </LinkInner>
-          </Desc>
+          </DescLine>
           <MovePage left="동물자유연대" right="CHANEL 22 BAG"></MovePage>
           <SubpageFooter
             github="https://github.com/chkim9910/x2y2-Renewal"

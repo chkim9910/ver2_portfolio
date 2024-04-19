@@ -22,6 +22,9 @@ const Inner = styled.div`
     flex-direction: column;
     gap: 8px;
   }
+  .intro-desc {
+    margin-top: 16px;
+  }
   .link {
     display: flex;
     justify-content: space-between;
@@ -37,6 +40,7 @@ const Inner = styled.div`
   }
 `;
 const LinkInner = styled.div`
+  width: 100%;
   margin-top: 16px;
   display: flex;
   .space {
@@ -125,7 +129,7 @@ export default function Chanel() {
                 </a>
               </li>
             </ul>
-            <p>
+            <p className="intro-desc">
               CHANEL 22 BAG 캠페인 페이지를 리다지인한 개인 프로젝트입니다.
               <br />
               4명의 CHANEL 앰버서드의 영상과 이미지를 최대로 활용하여 화보집과
@@ -165,7 +169,7 @@ export default function Chanel() {
             <img src={designGuide} alt="x2y2 design system" width={"1200px"} />
           </Desc>
           <Desc title="demo video"></Desc>
-          <Desc title="link to page">
+          <DescLine title="link to page">
             <LinkInner className="inner">
               <a
                 href="https://chkim9910.github.io/Chanel22bag-Renewal/"
@@ -181,7 +185,7 @@ export default function Chanel() {
               <div className="space"></div>
               <div className="space"></div>
             </LinkInner>
-          </Desc>
+          </DescLine>
           <MovePage left="x2y2" right="국립발레단"></MovePage>
           <SubpageFooter
             github="https://github.com/chkim9910/Chanel22bag-Renewal"

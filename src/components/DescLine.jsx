@@ -5,6 +5,7 @@ const Inner = styled.div`
   margin-top: 80px;
   .cont-box {
     display: flex;
+    width: 100%;
   }
 `;
 

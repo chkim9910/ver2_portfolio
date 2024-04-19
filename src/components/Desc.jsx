@@ -7,7 +7,7 @@ const Inner = styled.div`
     margin-top: 16px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    /* gap: 16px; */
     font-family: "Noto Sans KR", sans-serif;
     font-weight: ${(props) => (props.ftweight === "500" ? 500 : 400)};
     word-break: keep-all;
