@@ -7,8 +7,9 @@ const Inner = styled.div`
   gap: 8px;
   .title {
     font-weight: 700;
-    font-size: 28px;
+    font-size: 24px;
     height: 30px;
+    color: var(--primary);
   }
 `;
 const Line = styled.span`
