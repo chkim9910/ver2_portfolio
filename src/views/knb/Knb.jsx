@@ -37,6 +37,7 @@ const Inner = styled.div`
   }
 `;
 const LinkInner = styled.div`
+  margin-top: 16px;
   display: flex;
   .space {
     flex: 1;

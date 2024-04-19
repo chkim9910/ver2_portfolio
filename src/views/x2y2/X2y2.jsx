@@ -37,6 +37,7 @@ const Inner = styled.div`
   }
 `;
 const LinkInner = styled.div`
+  margin-top: 16px;
   display: flex;
   .link-to-page {
     flex: 1;
@@ -163,7 +164,7 @@ export default function X2y2() {
             <img src={designGuide} alt="x2y2 design system" width={"850px"} />
           </Desc>
           <Desc title="demo video"></Desc>
-          <Desc title="link to page">
+          <Desc title="link to page" className="link-to-page">
             <LinkInner className="inner">
               <a
                 href="https://chkim9910.github.io/x2y2-Renewal"
