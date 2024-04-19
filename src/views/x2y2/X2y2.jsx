@@ -189,7 +189,7 @@ export default function X2y2() {
             </a>
           </LinkInner>
         </Desc>
-        <MovePage left="동물자유연대" right="CHANNEL 22 BAG"></MovePage>
+        <MovePage left="동물자유연대" right="CHANEL 22 BAG"></MovePage>
         <SubpageFooter
           github="https://github.com/chkim9910/x2y2-Renewal"
           figma="https://www.figma.com/file/HGUUNmASp6wjTSMuonrRk4/X2Y2?type=design&node-id=0%3A1&mode=design&t=ThEXa9JAJPcw0LsM-1"

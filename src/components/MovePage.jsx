@@ -64,7 +64,7 @@ export default function MovePage(props) {
   return (
     <>
       <Inner className="inner">
-        <a href="/" className="box left">
+        <a href={"/" + props.left} className="box left">
           <span className="arr-icon">
             <MdArrowBack />
           </span>
@@ -73,7 +73,7 @@ export default function MovePage(props) {
             <span className="sub-text">Responsive website</span>
           </div>
         </a>
-        <a href="/" className="box right">
+        <a href={"/" + props.right} className="box right">
           <div className="text-box">
             <h3 className="title">{props.right}</h3>
             <span className="sub-text">Responsive website</span>
