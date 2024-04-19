@@ -11,7 +11,7 @@ import SubpageFooter from "../../components/layout/SubpageFooter";
 
 const Inner = styled.div`
   .mockup-img {
-    width: 110%;
+    width: calc(100% + 6.666vw);
     height: 80svh;
     position: relative;
     left: -3.333vw;
@@ -91,109 +91,121 @@ export default function X2y2() {
           &nbsp;NFT MARKETPLACE
         </SubpageTitle>
         <div className="mockup-img"></div>
-        <Desc title="intro">
-          <ul className="intro-li">
-            <li>Personal PROJECT </li>
-            <li>작업기간 | 24.01-02(1주 반 소요)</li>
-            <li>
-              <a href="/" className="link">
-                Github
+        <div className="desc">
+          <Desc title="intro">
+            <ul className="intro-li">
+              <li>Personal PROJECT </li>
+              <li>작업기간 | 24.01-02(1주 반 소요)</li>
+              <li>
+                <a
+                  href="https://github.com/chkim9910/x2y2-Renewal"
+                  className="link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Github
+                  <span className="arr-icon">
+                    <MdArrowOutward />
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.figma.com/file/HGUUNmASp6wjTSMuonrRk4/X2Y2?type=design&node-id=0%3A1&mode=design&t=ThEXa9JAJPcw0LsM-1"
+                  className="link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Figma
+                  <span className="arr-icon">
+                    <MdArrowOutward />
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p>
+              국내 NFT 사이트 x2y2를 리다지인한 개인 프로젝트입니다.
+              <br /> 정보성 사이트의 지루하고 복잡한 느낌을 없애기 위해 효율적인
+              접근성을 고려하여 UI 요소를 배치하였고, 심플 모던한 레이아웃을
+              제작하였습니다. <br /> react로 제작하여 코드 관리를 용이하게
+              하였고, motion framer, gsap 등의 다양한 인터렉션 요소를
+              배치하였습니다.  모바일, 태블릿 등 사용자 환경을 고려하여 반응형
+              웹페이지로 제작되었습니다.
+            </p>
+          </Desc>
+          <DescLine title="skill set">
+            <DescLineInner subtitle="Programing Languages">
+              <ul>
+                <li>JavaScript(ES6)</li>
+                <li>HTML5</li>
+                <li>CSS3</li>
+              </ul>
+            </DescLineInner>
+            <DescLineInner subtitle="Framework/ Library">
+              <ul>
+                <li>React</li>
+                <li>Styeld Component </li>
+                <li>Chakra UI</li>
+                <li>Motion Framer</li>
+                <li>GSAP</li>
+              </ul>
+            </DescLineInner>
+            <DescLineInner subtitle="TOOLING">
+              <ul>
+                <li>Figma</li>
+                <li>Adobe Illustrator</li>
+                <li>Adobe Photoshop</li>
+                <li>Github</li>
+              </ul>
+            </DescLineInner>
+          </DescLine>
+          <Desc title="design system">
+            <img src={designGuide} alt="x2y2 design system" width={"850px"} />
+          </Desc>
+          <Desc title="demo video"></Desc>
+          <Desc title="link to page">
+            <LinkInner className="inner">
+              <a
+                href="https://chkim9910.github.io/x2y2-Renewal"
+                className="link-to-page link1"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <p className="title">MAIN PAGE</p>
                 <span className="arr-icon">
                   <MdArrowOutward />
                 </span>
               </a>
-            </li>
-            <li>
-              <a href="/" className="link">
-                Figma
+              <a
+                href="https://chkim9910.github.io/x2y2-Renewal/moreview1"
+                className="link-to-page link2"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <p className="title">SUB PAGE 1</p>
                 <span className="arr-icon">
                   <MdArrowOutward />
                 </span>
               </a>
-            </li>
-          </ul>
-          <p>
-            국내 NFT 사이트 x2y2를 리다지인한 개인 프로젝트입니다.
-            <br /> 정보성 사이트의 지루하고 복잡한 느낌을 없애기 위해 효율적인
-            접근성을 고려하여 UI 요소를 배치하였고, 심플 모던한 레이아웃을
-            제작하였습니다. <br /> react로 제작하여 코드 관리를 용이하게 하였고,
-            motion framer, gsap 등의 다양한 인터렉션 요소를 배치하였습니다. 
-            모바일, 태블릿 등 사용자 환경을 고려하여 반응형 웹페이지로
-            제작되었습니다.
-          </p>
-        </Desc>
-        <DescLine title="skill set">
-          <DescLineInner subtitle="Programing Languages">
-            <ul>
-              <li>JavaScript(ES6)</li>
-              <li>HTML5</li>
-              <li>CSS3</li>
-            </ul>
-          </DescLineInner>
-          <DescLineInner subtitle="Framework/ Library">
-            <ul>
-              <li>React</li>
-              <li>Styeld Component </li>
-              <li>Chakra UI</li>
-              <li>Motion Framer</li>
-              <li>GSAP</li>
-            </ul>
-          </DescLineInner>
-          <DescLineInner subtitle="TOOLING">
-            <ul>
-              <li>Figma</li>
-              <li>Adobe Illustrator</li>
-              <li>Adobe Photoshop</li>
-              <li>Github</li>
-            </ul>
-          </DescLineInner>
-        </DescLine>
-        <Desc title="design system">
-          <img src={designGuide} alt="x2y2 design system" width={"850px"} />
-        </Desc>
-        <Desc title="demo video"></Desc>
-        <Desc title="link to page">
-          <LinkInner className="inner">
-            <a
-              href="https://chkim9910.github.io/x2y2-Renewal"
-              className="link-to-page link1"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <p className="title">MAIN PAGE</p>
-              <span className="arr-icon">
-                <MdArrowOutward />
-              </span>
-            </a>
-            <a
-              href="https://chkim9910.github.io/x2y2-Renewal/moreview1"
-              className="link-to-page link2"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <p className="title">SUB PAGE 1</p>
-              <span className="arr-icon">
-                <MdArrowOutward />
-              </span>
-            </a>
-            <a
-              href="https://chkim9910.github.io/x2y2-Renewal/moreview2"
-              className="link-to-page link3"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <p className="title">SUB PAGE 2</p>
-              <span className="arr-icon">
-                <MdArrowOutward />
-              </span>
-            </a>
-          </LinkInner>
-        </Desc>
-        <MovePage left="동물자유연대" right="CHANEL 22 BAG"></MovePage>
-        <SubpageFooter
-          github="https://github.com/chkim9910/x2y2-Renewal"
-          figma="https://www.figma.com/file/HGUUNmASp6wjTSMuonrRk4/X2Y2?type=design&node-id=0%3A1&mode=design&t=ThEXa9JAJPcw0LsM-1"
-        />
+              <a
+                href="https://chkim9910.github.io/x2y2-Renewal/moreview2"
+                className="link-to-page link3"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <p className="title">SUB PAGE 2</p>
+                <span className="arr-icon">
+                  <MdArrowOutward />
+                </span>
+              </a>
+            </LinkInner>
+          </Desc>
+          <MovePage left="동물자유연대" right="CHANEL 22 BAG"></MovePage>
+          <SubpageFooter
+            github="https://github.com/chkim9910/x2y2-Renewal"
+            figma="https://www.figma.com/file/HGUUNmASp6wjTSMuonrRk4/X2Y2?type=design&node-id=0%3A1&mode=design&t=ThEXa9JAJPcw0LsM-1"
+          />
+        </div>
       </Inner>
     </>
   );
