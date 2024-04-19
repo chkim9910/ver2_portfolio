@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { IoLogoGithub } from "react-icons/io";
 import { MdArrowOutward } from "react-icons/md";
 import { RefContext, useRefs } from "../../RefContext";
@@ -230,7 +230,6 @@ export default function Gnb(props) {
     };
   }, [contactRef]);
 
-  const gnb = useRef(null);
   const closed = () => {
     props.setIsOpen(false);
   };
@@ -239,7 +238,6 @@ export default function Gnb(props) {
       <Box
         className="gnb"
         isOpen={props.isOpen}
-        ref={gnb}
         aboutRef={aboutRef}
         projectRef={projectRef}
         contactRef={contactRef}
