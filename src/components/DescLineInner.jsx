@@ -15,6 +15,7 @@ const ContInner = styled.div`
     border-top: 1px solid var(--primary);
     border-bottom: 1px solid var(--primary);
     padding: 2px 0;
+    color: var(--primary);
   }
 `;
 
