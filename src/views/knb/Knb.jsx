@@ -216,7 +216,7 @@ export default function Knb() {
               </a>
             </LinkInner>
           </DescLine>
-          <MovePage left="동물자유연대" right="CHANEL 22 BAG"></MovePage>
+          <MovePage left="CHANEL 22 BAG" right="동물자유연대"></MovePage>
           <SubpageFooter
             github="https://github.com/chkim9910/KNB-Renewal"
             figma="https://www.figma.com/file/Cl8l0xViAvpO7k100UhVrT/%EA%B5%AD%EB%A6%BD%EB%B0%9C%EB%A0%88%EB%8B%A8?type=design&node-id=0-1&mode=design&t=9AgFraqeMWRqO0VX-0"
