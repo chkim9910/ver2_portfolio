@@ -3,11 +3,18 @@ import { IoLogoGithub } from "react-icons/io";
 import { FaFigma } from "react-icons/fa";
 
 const Inner = styled.div`
-  width: 100%;
-  padding-bottom: 30px;
   margin-top: 120px;
   display: flex;
   justify-content: space-between;
+  position: relative;
+  left: calc((100vw - 1280px) / -2);
+  width: 100vw;
+  padding: 0 3.333vw 30px;
+  @media screen and (max-width: 1280px) {
+    width: 100%;
+    left: 0;
+    padding: 0 0 30px;
+  }
   .copyright {
     font-size: 14px;
     font-weight: 400;
