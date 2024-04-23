@@ -12,7 +12,7 @@ import designGuide from "../../assets/images/kawa/동물자유
 const Inner = styled.div`
   .mockup-box {
     width: calc(100% + 6.666vw);
-    height: 80svh;
+    height: 100svh;
     position: relative;
     left: -3.333vw;
     background: #ffd599;

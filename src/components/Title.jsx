@@ -34,7 +34,7 @@ const SubpageInner = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 772px;
+  height: 100svh;
   .inner {
     width: fit-content;
   }

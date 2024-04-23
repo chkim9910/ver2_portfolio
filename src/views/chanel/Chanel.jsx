@@ -12,7 +12,7 @@ import designGuide from "../../assets/images/chanel/chanel_Style-Guide.jpg";
 const Inner = styled.div`
   .mockup-img {
     width: calc(100% + 6.666vw);
-    height: 80svh;
+    height: 100svh;
     position: relative;
     left: -3.333vw;
     background: url(${mockup}) no-repeat 50% 40% /120%;
