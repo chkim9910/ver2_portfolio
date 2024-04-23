@@ -109,6 +109,10 @@ const BottomBox = styled.div`
   justify-content: space-between;
   align-items: flex-end;
 
+  position: absolute;
+  width: 100vw;
+  padding: 0 3.33vw 30px;
+
   .copyright {
     text-transform: uppercase;
     font-size: 14px;
@@ -220,15 +224,23 @@ const Sect3Inner = styled.div`
 `;
 const Sect4Inner = styled.div`
   position: relative;
-  left: -3.333vw;
-  width: calc(100% + 6.666vw);
+  background: var(--primary);
+  width: 100vw;
+  left: calc((100vw - 1280px) / -2);
+  @media screen and (max-width: 1280px) {
+    left: -3.333vw;
+    width: calc(100% + 6.666vw);
+  }
   .inner-box {
     display: flex;
     flex-direction: column;
     gap: 24px;
     color: white;
-    background: var(--primary);
-    padding: 120px 10%;
+    position: relative;
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 120px;
+    /*  */
   }
   .title {
     font-size: 56px;
@@ -286,10 +298,13 @@ const Sect5Inner = styled.div`
     color: var(--primary);
   }
 `;
+const Footer = styled.footer`
+  position: relative;
+  width: 100vw !important;
+`;
 const FooterInner = styled.div`
-  margin-top: 120px;
-  padding-bottom: 30px;
-  width: 100%;
+  padding: 120px 3.33vw 30px;
+  /* width: 100%; */
   .copyright {
     font-size: 14px;
     font-weight: 400;
@@ -493,13 +508,13 @@ export default function Home() {
           </Sect5Inner>
         </section>
         {/* footer */}
-        <footer>
+        <Footer className="footer">
           <FooterInner className="inner">
             <p className="title copyright">
               Copyright 2024 - chohyang kim, All rights reserved.
             </p>
           </FooterInner>
-        </footer>
+        </Footer>
       </Wrap>
     </>
   );

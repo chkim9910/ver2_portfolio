@@ -5,7 +5,12 @@ import { useRef } from "react";
 import { RefContext } from "../../RefContext";
 
 const Box = styled.div`
-  padding: 0 3.333vw;
+  max-width: 1280px;
+  margin: 0 auto;
+  @media screen and (max-width: 1280px) {
+    padding: 0 3.333vw;
+    overflow: hidden;
+  }
 `;
 
 export default function Layout() {
