@@ -3,10 +3,14 @@ import macmockup from "../assets//images/comm/MacBook-mockup.png";
 
 const Inner = styled.div`
   display: flex;
-  margin-bottom: 100px;
+  align-items: center;
+  margin-bottom: 50px;
   margin-top: 16px;
+  .video-desc {
+    flex: 1;
+  }
   .video-box {
-    width: 100%;
+    flex: 1;
     height: 500px;
     position: relative;
   }
@@ -18,12 +22,15 @@ const Inner = styled.div`
     width: 100%;
   }
   video {
+    /* height: 385px; */
+    height: 79%;
+    width: 82%;
     position: absolute;
     z-index: 9;
-    height: 385px;
-    top: 44px;
+    /* top: 44px; */
+    top: -30%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, 48%);
   }
 `;
 
@@ -37,6 +44,22 @@ export default function Video(props) {
         <div className="video-box main-video">
           <div className="mac-mockup"></div>
           <video src={props.src} loop muted autoPlay></video>
+        </div>
+      </Inner>
+    </>
+  );
+}
+
+export function Videoright(props) {
+  return (
+    <>
+      <Inner className="video-inner main-box">
+        <div className="video-box main-video">
+          <div className="mac-mockup"></div>
+          <video src={props.src} loop muted autoPlay></video>
+        </div>
+        <div className="video-desc">
+          <p>{props.children}</p>
         </div>
       </Inner>
     </>
