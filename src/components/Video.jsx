@@ -24,12 +24,15 @@ const Inner = styled.div`
   video {
     /* height: 385px; */
     height: 79%;
-    width: 82%;
+    /* width: 82%; */
+    width: ${(props) => (props.width ? props.width : "82%")};
     position: absolute;
     z-index: 9;
     /* top: 44px; */
-    top: -30%;
-    left: 50%;
+    /* top: -30%; */
+    top: ${(props) => (props.top ? props.top : "-30%")};
+    /* left: 50%; */
+    left: ${(props) => (props.left ? props.left : "50%")};
     transform: translate(-50%, 48%);
   }
 `;
@@ -37,7 +40,12 @@ const Inner = styled.div`
 export default function Video(props) {
   return (
     <>
-      <Inner className="video-inner main-box">
+      <Inner
+        className="video-inner main-box"
+        width={props.width}
+        left={props.left}
+        top={props.top}
+      >
         <div className="video-desc">
           <div>{props.children}</div>
         </div>
