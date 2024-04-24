@@ -1,5 +1,10 @@
 import { SubpageTitle } from "../../components/Title";
 import mockup from "../../assets/images/landing-page/x2y2_mockup.jpg";
+import mainVideo from "../../assets/videos/x2y2/x2y2-main.mov";
+import sub1Video from "../../assets/videos/x2y2/x2y2-sub1.mov";
+import sub2Video from "../../assets/videos/x2y2/x2y2-sub2.mov";
+import maintransitionVideo from "../../assets/videos/x2y2/x2y2-main-transition.mov";
+import sub1transitionVideo from "../../assets/videos/x2y2/x2y2-sub1-transition.mov";
 import styled from "@emotion/styled";
 import Desc from "../../components/Desc";
 import { MdArrowOutward } from "react-icons/md";
@@ -8,15 +13,23 @@ import DescLineInner from "../../components/DescLineInner";
 import designGuide from "../../assets/images/x2y2/x2y2_Style-Guide.jpg";
 import MovePage from "../../components/MovePage";
 import SubpageFooter from "../../components/layout/SubpageFooter";
+import Video from "../../components/Video";
 
 const Inner = styled.div`
   .mockup-img {
-    width: calc(100% + 6.666vw);
     height: 100svh;
     position: relative;
     left: -3.333vw;
     background: url(${mockup}) no-repeat 30% 48% /120%;
+    width: 100vw;
+    left: calc((100vw - 1280px) / -2);
+    @media screen and (max-width: 1280px) {
+      width: 100vw;
+
+      left: -3.333vw;
+    }
   }
+
   .intro-li {
     display: flex;
     flex-direction: column;
@@ -37,6 +50,11 @@ const Inner = styled.div`
   }
   .arr-icon {
     font-size: 16px;
+  }
+  .video-subtitle {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 6px;
   }
 `;
 const LinkInner = styled.div`
@@ -167,7 +185,39 @@ export default function X2y2() {
           <Desc title="design system">
             <img src={designGuide} alt="x2y2 design system" width={"850px"} />
           </Desc>
-          <Desc title="demo video"></Desc>
+          <Desc title="details">
+            <Video src={mainVideo}>
+              <h2 className="title video-subtitle">main page</h2>
+              <p>
+                랜딩페이지는 Swiper.js로 구현한 nft 상품을 소개하는 슬라이드로
+                시작합니다. Explore Collection 버튼을 클릭하면 collection의
+                상세페이지로 이동합니다. 이후 table 태그로 제작한 Hot
+                Collections 섹션, ETH의 시세를 한 눈에 파악하기 쉽게 배치한
+                Market, NFT Loan 섹션으로 이어집니다. mouse hover 기능을 적극
+                활용한 Spotlight 섹션에서는 현재 주목받는 nft 및 작가 소개를
+                하고, layout의 깔끔함을 유지하기 위해 슬라이드로 제작한 광고
+                섹션으로 마무리됩니다.
+              </p>
+            </Video>
+            <Video src={sub1Video}>
+              <h2 className="title video-subtitle">Collection page</h2>
+              <p>
+                작가에 대한 소개와 작품의 시세를 확인할 수 있는 미니 table을
+                상단에 배치하였습니다. 필터는 좌측 레이아웃에 배치하였으나 phone
+                size와 tablet size에서는 상단에 배치되도록 하였습니다. motion
+                framer를 활용해 작품을 hover 했을 때의 애니메이션을 구현하였으며
+                작품을 클릭하면 작품 상세 페이지로 이동합니다.
+              </p>
+            </Video>
+            <Video src={sub2Video}>
+              <h2 className="title video-subtitle">details page</h2>
+              <p>
+                작품의 상세 정보를 담고 있는 페이지입니다. 하단에 More from this
+                collection 섹션은 작가의 다른 작품들을 소개하는 섹션으로
+                슬라이드로 구현하였습니다.
+              </p>
+            </Video>
+          </Desc>
           <DescLine title="link to page">
             <LinkInner className="inner">
               <a
