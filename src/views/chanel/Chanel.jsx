@@ -8,6 +8,10 @@ import Desc from "../../components/Desc";
 import DescLineInner from "../../components/DescLineInner";
 import DescLine from "../../components/DescLine";
 import designGuide from "../../assets/images/chanel/chanel_Style-Guide.jpg";
+import Video from "../../components/Video";
+import introVideo from "../../assets/videos/chanel/chanel-intro.mov";
+import gnbVideo from "../../assets/videos/chanel/chanel-gnb.mov";
+import mainVideo from "../../assets/videos/chanel/chanel-main.mov";
 
 const Inner = styled.div`
   .mockup-img {
@@ -37,6 +41,11 @@ const Inner = styled.div`
   }
   .arr-icon {
     font-size: 16px;
+  }
+  .video-subtitle {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 6px;
   }
 `;
 const LinkInner = styled.div`
@@ -168,7 +177,34 @@ export default function Chanel() {
           <Desc title="design system">
             <img src={designGuide} alt="x2y2 design system" width={"1200px"} />
           </Desc>
-          <Desc title="demo video"></Desc>
+          <Desc title="details">
+            <Video src={introVideo} width="83%" left="50.3%" top="-29.1%">
+              <h2 className="title video-subtitle">intro page</h2>
+              <p>
+                intro page는 CHANEL 22 BAG의 캠페인 영상을 활용해
+                제작하였습니다. <br />
+                CHANEL 버튼을 클릭하면 메인 페이지로 이동합니다.
+              </p>
+            </Video>
+            <Video src={gnbVideo} width="83%" left="50.3%" top="-29.1%">
+              <h2 className="title video-subtitle">gnb page</h2>
+              <p>
+                Parallax.js 라이브러리를 사용하여 마우스 움직임에 반응하는
+                인터렉션 액션을 구현하였습니다. font size와 point color, 밑줄로
+                메뉴에 highlight을 주었습니다.
+              </p>
+            </Video>
+            <Video src={mainVideo} width="83%" left="50.3%" top="-29.1%">
+              <h2 className="title video-subtitle">main page</h2>
+              <p>
+                CHANEL 22 BAG의 스토리 소개 섹션으로 시작하여, 4명의 앰버서더의
+                화보집 섹션으로 구성하였습니다. horizontal 슬라이드로 제작한
+                화보집 섹션은 앰버서더들의 영상과 사진을 다채롭게
+                배치하였습니다. 이후 CHANEL 22 BAG 소개 섹션, 부티크 안내 섹션을
+                구성하며 페이지를 마무리하였습니다.
+              </p>
+            </Video>
+          </Desc>
           <DescLine title="link to page">
             <LinkInner className="inner">
               <a
