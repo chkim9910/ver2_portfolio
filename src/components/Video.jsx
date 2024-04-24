@@ -39,7 +39,7 @@ export default function Video(props) {
     <>
       <Inner className="video-inner main-box">
         <div className="video-desc">
-          <p>{props.children}</p>
+          <div>{props.children}</div>
         </div>
         <div className="video-box main-video">
           <div className="mac-mockup"></div>
