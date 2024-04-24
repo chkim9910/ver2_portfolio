@@ -4,7 +4,7 @@ import macmockup from "../assets//images/comm/MacBook-mockup.png";
 const Inner = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
   margin-top: 16px;
   .video-desc {
     flex: 1;
