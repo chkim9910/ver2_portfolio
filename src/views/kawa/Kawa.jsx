@@ -8,6 +8,11 @@ import DescLine from "../../components/DescLine";
 import Desc from "../../components/Desc";
 import DescLineInner from "../../components/DescLineInner";
 import designGuide from "../../assets/images/kawa/동물자유연대_Style-Guide.jpg";
+import Video from "../../components/Video";
+import gnbVideo from "../../assets/videos/kawa/kawa-gnb.mov";
+import mainVideo from "../../assets/videos/kawa/kawa-main-1.mov";
+import sub1Video from "../../assets/videos/kawa/kawa-sub1-1.mov";
+import sub2Video from "../../assets/videos/kawa/kawa-sub2-1.mov";
 
 const Inner = styled.div`
   .mockup-box {
@@ -47,6 +52,11 @@ const Inner = styled.div`
   }
   .arr-icon {
     font-size: 16px;
+  }
+  .video-subtitle {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 6px;
   }
 `;
 const LinkInner = styled.div`
@@ -186,7 +196,53 @@ export default function Kawa() {
           <Desc title="design system">
             <img src={designGuide} alt="x2y2 design system" width={"1200px"} />
           </Desc>
-          <Desc title="demo video"></Desc>
+          <Desc title="details">
+            <Video src={gnbVideo} width="83%" left="50.3%">
+              <h2 className="title video-subtitle">gnb</h2>
+              <p>
+                gnb에 mouse hover 시 전체 메뉴가 보이도록 제작하였습니다.
+                상위메뉴에는 상단 밑줄로, 하위 메뉴에는 color와 font weight의
+                변화로 highlight을 주었습니다.
+              </p>
+            </Video>
+            <Video src={mainVideo} width="83%" left="50.3%">
+              <h2 className="title video-subtitle">main page</h2>
+              <p>
+                랜딩페이지는 메인 캠페인 소개 섹션을 시작으로 주요활동, 온센터,
+                캠페인, 새소식, 뉴스레터, 후원하기 섹션으로 구성됩니다. 메인
+                캠페인 소개와 주요활동, 온센터 갤러리, 캠페인 섹션은 Swiper.js
+                라이브러리를 활용해 슬라이드로 구현하였습니다. GSAP
+                라이브러리로는 다양한 scroll trigger 애니메이션을
+                구현하였습니다.
+              </p>
+            </Video>
+            <Video src={sub1Video} width="83%" left="50.3%">
+              <h2 className="title video-subtitle">
+                미션&비전 page (sub1 page)
+              </h2>
+              <p>
+                미션&비전 페이지는 동물자유연대의 미션과 비전 섹션을 시작으로
+                핵심 가치, 프로그램 별 미션과 비전 섹션으로 구성하였습니다.
+                핵심가치 섹션은 GSAP을 활용해 인터랙티브하게 액션이 이루어지도록
+                제작하였고, 상대적으로 텍스트가 많은 프로그램 별 미션과 비전
+                섹션은 horizontal 슬라이드로 구현하여 가독성을 높였습니다.
+              </p>
+            </Video>
+            <Video src={sub2Video} width="83%" left="50.3%">
+              <h2 className="title video-subtitle">
+                후원안내 page (sub2 page)
+              </h2>
+              <p>
+                후원안내 페이지는 동물자유연대 후원 소개, 후원금 사용처 안내,
+                후원 Q&A, 수입 및 지출 보고 섹션으로 구성하였습니다. 후원금
+                사용처 안내 섹션은 Glide.js 라이브러리를 사용해 슬라이드를
+                제작하였고, active된 이미지 슬라이드에 해당하는 안내글이
+                보이도록 제작하였습니다. 후원 Q&A 섹션은 mouse hover 시 카드가
+                flip 되면서, 뒷면에 있는 답변이 보이도록 제작하였습니다. Q&A
+                섹션의 카드는 css, javascript로 구현하였습니다.
+              </p>
+            </Video>
+          </Desc>
           <DescLine title="link to page">
             <LinkInner className="inner">
               <a
