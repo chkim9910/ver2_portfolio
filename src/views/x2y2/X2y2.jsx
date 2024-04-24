@@ -3,8 +3,6 @@ import mockup from "../../assets/images/landing-page/x2y2_mockup.jpg";
 import mainVideo from "../../assets/videos/x2y2/x2y2-main.mov";
 import sub1Video from "../../assets/videos/x2y2/x2y2-sub1.mov";
 import sub2Video from "../../assets/videos/x2y2/x2y2-sub2.mov";
-import maintransitionVideo from "../../assets/videos/x2y2/x2y2-main-transition.mov";
-import sub1transitionVideo from "../../assets/videos/x2y2/x2y2-sub1-transition.mov";
 import styled from "@emotion/styled";
 import Desc from "../../components/Desc";
 import { MdArrowOutward } from "react-icons/md";
