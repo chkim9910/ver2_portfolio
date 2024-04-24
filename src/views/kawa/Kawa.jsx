@@ -16,7 +16,6 @@ import sub2Video from "../../assets/videos/kawa/kawa-sub2-1.mov";
 
 const Inner = styled.div`
   .mockup-box {
-    width: calc(100% + 6.666vw);
     height: 100svh;
     position: relative;
     left: -3.333vw;
@@ -24,6 +23,12 @@ const Inner = styled.div`
     -webkit-mmask-image: linear-gradient(#ffd599 100%, #ffd599 100%);
     mask-image: linear-gradient(#ffd599 100%, #ffd599 100%);
     overflow: hidden;
+    width: 100vw;
+    left: calc((100vw - 1280px) / -2);
+    @media screen and (max-width: 1280px) {
+      width: 100vw;
+      left: -3.333vw;
+    }
   }
   .mockup-img {
     width: 120%;

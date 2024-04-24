@@ -15,11 +15,16 @@ import mainVideo from "../../assets/videos/chanel/chanel-main.mov";
 
 const Inner = styled.div`
   .mockup-img {
-    width: calc(100% + 6.666vw);
     height: 100svh;
     position: relative;
     left: -3.333vw;
     background: url(${mockup}) no-repeat 50% 40% /120%;
+    width: 100vw;
+    left: calc((100vw - 1280px) / -2);
+    @media screen and (max-width: 1280px) {
+      width: 100vw;
+      left: -3.333vw;
+    }
   }
   .intro-li {
     display: flex;

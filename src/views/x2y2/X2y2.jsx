@@ -23,7 +23,6 @@ const Inner = styled.div`
     left: calc((100vw - 1280px) / -2);
     @media screen and (max-width: 1280px) {
       width: 100vw;
-
       left: -3.333vw;
     }
   }

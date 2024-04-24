@@ -14,11 +14,16 @@ import mainVideo from "../../assets/videos/knb/knb-main-1.mov";
 
 const Inner = styled.div`
   .mockup-img {
-    width: calc(100% + 6.666vw);
     height: 100svh;
     position: relative;
     left: -3.333vw;
     background: url(${mockup}) no-repeat 50% 30% /100%;
+    width: 100vw;
+    left: calc((100vw - 1280px) / -2);
+    @media screen and (max-width: 1280px) {
+      width: 100vw;
+      left: -3.333vw;
+    }
   }
   .intro-li {
     display: flex;
