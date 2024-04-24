@@ -8,6 +8,9 @@ import Desc from "../../components/Desc";
 import DescLineInner from "../../components/DescLineInner";
 import DescLine from "../../components/DescLine";
 import designGuide from "../../assets/images/knb/국립발레단_Style-Guide.jpg";
+import Video from "../../components/Video";
+import gnbVideo from "../../assets/videos/knb/knb-gnb.mov";
+import mainVideo from "../../assets/videos/knb/knb-main-1.mov";
 
 const Inner = styled.div`
   .mockup-img {
@@ -37,6 +40,11 @@ const Inner = styled.div`
   }
   .arr-icon {
     font-size: 16px;
+  }
+  .video-subtitle {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 6px;
   }
 `;
 const LinkInner = styled.div`
@@ -178,7 +186,31 @@ export default function Knb() {
           <Desc title="design system">
             <img src={designGuide} alt="x2y2 design system" width={"1200px"} />
           </Desc>
-          <Desc title="demo video"></Desc>
+          <Desc title="details">
+            <Video src={gnbVideo} width="83%" left="50.3%">
+              <h2 className="title video-subtitle">gnb</h2>
+              <p>
+                header 제작을 담당하였습니다. 메뉴에 mouse hover 시 하위 메뉴가
+                나오도록 제작하였습니다. point color를 활용하여 메뉴에
+                highlight을 주었습니다.
+              </p>
+            </Video>
+            <Video src={mainVideo} width="83%" left="50.3%">
+              <h2 className="title video-subtitle">
+                공연정보 page (sub2 page)
+              </h2>
+              <p>
+                공연정보 페이지는 공연정보 섹션을 시작으로 공연일정, 공연연보
+                섹션 순으로 구성하였습니다. 공연정보 섹션은 아래서 위로 내용이
+                슬라이드되도록 GSAP 라이브러리를 활용하였습니다. 슬라이드 전용
+                라이브러리보다 구현하기 까다로웠으나, GSAP을 이해하고 활용하는
+                능력을 기를 수 있는 좋은 경험이 되었습니다. 공연일정 섹션은
+                FullCalendar.js 라이브러리로 제작하였으며, 공연연보는 GSAP과
+                Swiper.js 라이브러리를 활용하여 각기 다른 느낌의 세부 섹션들을
+                제작하였습니다.
+              </p>
+            </Video>
+          </Desc>
           <DescLine title="link to page">
             <LinkInner className="inner">
               <a
