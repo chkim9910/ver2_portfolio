@@ -15,6 +15,9 @@ import DescLineInner from "../../components/DescLineInner";
 import ProjectCard from "./components/ProjectCard";
 // import { useRef } from "react";
 import { useRefs } from "../../RefContext";
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Wrap = styled.div`
   display: flex;
@@ -312,18 +315,34 @@ const FooterInner = styled.div`
 `;
 
 export default function Home() {
-  // const aboutRef = useRef(null);
-  // const projectRef = useRef(null);
-  // const contactRef = useRef(null);
   const { aboutRef, projectRef, contactRef } = useRefs();
+  // AOS
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
     <>
       <Wrap className="wrap">
         {/* section1 */}
         <section className="section1">
           <TopBox className="main-box">
-            <h2 className="title">CHOHYANG</h2>
-            <p className="desc">
+            <h2
+              className="title"
+              data-aos="fade-in"
+              data-aos-duration="1400"
+              data-aos-easing="ease-in-out"
+              data-aos-delay="100"
+            >
+              CHOHYANG
+            </h2>
+            <p
+              className="desc"
+              data-aos="fade-in"
+              data-aos-duration="800"
+              data-aos-easing="ease-in-out"
+              data-aos-delay="1200"
+            >
               2024 포트폴리오는 퍼블리싱에 발을 내딛은 2023년 하반기부터 step by
               step으로 배우며 만든 프로젝트들을 정리한 결과물입니다. 현재는 개발
               블로그를 운영하며 사용자 관점의 ui/ux 디자인 공부와 프론트앤드
@@ -332,7 +351,14 @@ export default function Home() {
                 엉덩이 오래 붙드는 웹퍼블리셔 김초향의 성장 이야기를 들어보세요.
               </span>
             </p>
-            <img src={arr} alt="화살표" />
+            <img
+              src={arr}
+              alt="화살표"
+              data-aos="fade-in"
+              data-aos-duration="1000"
+              data-aos-easing="linear"
+              data-aos-delay="2000"
+            />
           </TopBox>
           <BottomBox className="bottom-box">
             <p className="font-made-upper copyright">
@@ -360,12 +386,29 @@ export default function Home() {
         </section>
         {/* section2 */}
         <section className="section2" ref={aboutRef} id="about">
-          <div className="num">
+          <div
+            className="num"
+            data-aos="fade-right"
+            data-aos-duration="1200"
+            data-aos-easing="ease-in-out"
+          >
             <p>01</p>
             <span className="num-line"></span>
           </div>
-          <Sect2Inner className="inner">
-            <h2 className="title">
+          <Sect2Inner
+            className="inner"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-easing="ease-in-out"
+            data-aos-delay="800"
+          >
+            <h2
+              className="title"
+              // data-aos="fade-right"
+              // data-aos-duration="1200"
+              // data-aos-easing="ease-in-out"
+              // data-aos-delay="100"
+            >
               <span>FOR THE NEXT STEP</span>
               <span className="intro">
                 집념과 책임감으로 <br />
@@ -373,12 +416,25 @@ export default function Home() {
               </span>
             </h2>
             <div className="desc">
-              <Desc title="experience" ftweight="500">
+              <Desc
+                title="experience"
+                ftweight="500"
+                data-aos="fade-up"
+                data-aos-duration="1200"
+                data-aos-easing="ease-in-out"
+                data-aos-delay="100"
+              >
                 원티드 프리온보딩 챌린지 ux design with duotone design agency
                 참가 <br /> 웹디자인기능사 자격증 취득 <br /> UI/UX
                 웹앱디자인&프론트앤드 과정 수료
               </Desc>
-              <DescLine title="skill set">
+              <DescLine
+                title="skill set"
+                data-aos="fade-up"
+                data-aos-duration="1200"
+                data-aos-easing="ease-in-out"
+                data-aos-delay="100"
+              >
                 <DescLineInner subtitle="Programing Languages">
                   JavaScript(ES6)
                   <br /> HTML5
@@ -403,7 +459,13 @@ export default function Home() {
                   <br /> Codesandbox
                 </DescLineInner>
               </DescLine>
-              <Desc title="words">
+              <Desc
+                title="words"
+                data-aos="fade-up"
+                data-aos-duration="1200"
+                data-aos-easing="ease-in-out"
+                data-aos-delay="100"
+              >
                 꼼꼼하게 코드를 분석하고 이해하는 과정에서 다양한 UI 인터렉션
                 요소 및 라이브러리들을 찾고 적용하는 것에 재미를 발견하고
                 있습니다. <br /> codepen, github, codesandbox를 적극 활용하여
@@ -416,7 +478,13 @@ export default function Home() {
                 당장에 완벽하지 않더라도 그것을 향해 한 발자국 더 나아가는
                 퍼블리셔가 되는 것을 목표로 부지런히 정진하고 있습니다.
               </Desc>
-              <DescLine title="interested in">
+              <DescLine
+                title="interested in"
+                data-aos="fade-up"
+                data-aos-duration="1200"
+                data-aos-easing="ease-in-out"
+                data-aos-delay="100"
+              >
                 <DescLineInner subtitle="YOGA / WALK">
                   생각이 많고, 마음이 복잡할 때 몸과 마음을 이완시킬 수 있는
                   요가를 합니다. 생각과 마음을 refresh할 수 있는 산책도 즐겨
@@ -443,7 +511,12 @@ export default function Home() {
         </section>
         {/* section3 */}
         <section className="section3" ref={projectRef} id="project">
-          <div className="num">
+          <div
+            className="num"
+            data-aos="fade-right"
+            data-aos-duration="1200"
+            data-aos-easing="ease-in-out"
+          >
             <p>02</p>
             <span className="num-line"></span>
           </div>
@@ -468,7 +541,13 @@ export default function Home() {
         </section>
         {/* section4 */}
         <section className="section4">
-          <Sect4Inner className="inner">
+          <Sect4Inner
+            className="inner"
+            data-aos="fade-up"
+            data-aos-duration="1200"
+            data-aos-easing="ease-in-out"
+            // data-aos-delay="50"
+          >
             <div className="inner-box">
               <div className="text-box">
                 <h2 className="title">resume</h2>
@@ -485,7 +564,13 @@ export default function Home() {
         </section>
         {/* section5 */}
         <section className="section5" ref={contactRef} id="contact">
-          <Sect5Inner className="inner">
+          <Sect5Inner
+            className="inner"
+            data-aos="fade-in"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            // data-aos-delay="50"
+          >
             <p className="title sub-text">let’s work together!</p>
             <h3 className="title main-text">get in touch</h3>
             <a href="mailto:chohyang9910@gmail.com" className="addr">

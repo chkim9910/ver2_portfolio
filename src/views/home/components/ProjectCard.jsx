@@ -1,4 +1,7 @@
 import styled from "@emotion/styled";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 import { MdArrowForward } from "react-icons/md";
 
 const Inner = styled.div`
@@ -46,9 +49,18 @@ const Inner = styled.div`
 `;
 
 export default function ProjectCard(props) {
+  // AOS
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <>
-      <Inner img={props.img}>
+      <Inner
+        img={props.img}
+        // data-aos="fade-up"
+        // data-aos-duration="1200"
+        // data-aos-easing="linear"
+      >
         <a href={"/" + props.name} className="inner">
           <div className="img"></div>
           <div className="text-box">
