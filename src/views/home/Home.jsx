@@ -295,10 +295,25 @@ const Sect5Inner = styled.div`
     position: relative;
     top: 0;
     transition: all 0.3s;
+    position: relative;
+    margin-bottom: 5px;
   }
-  .addr:hover,
-  .kakao:hover {
-    color: var(--primary);
+  .addr::after,
+  .kakao::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    height: 1.5px;
+    width: 100%;
+    background: var(--primary);
+    transform: scaleX(0);
+    transform-origin: left left;
+    transition: all 0.3s;
+  }
+  .addr:hover::after,
+  .kakao:hover::after {
+    transform-origin: right right;
+    transform: scaleX(1);
   }
 `;
 const Footer = styled.footer`

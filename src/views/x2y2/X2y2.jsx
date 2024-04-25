@@ -44,9 +44,22 @@ const Inner = styled.div`
     align-items: center;
     width: 80px;
     transition: all 0.3s;
+    position: relative;
   }
-  .link:hover {
-    color: var(--primary);
+  .link::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    height: 2px;
+    width: 100%;
+    background: var(--primary);
+    transform: scaleX(0);
+    transform-origin: left left;
+    transition: all 0.3s;
+  }
+  .link:hover::after {
+    transform-origin: right right;
+    transform: scaleX(1);
   }
   .arr-icon {
     font-size: 16px;
