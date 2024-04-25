@@ -12,6 +12,9 @@ import Video from "../../components/Video";
 import introVideo from "../../assets/videos/chanel/chanel-intro.mov";
 import gnbVideo from "../../assets/videos/chanel/chanel-gnb.mov";
 import mainVideo from "../../assets/videos/chanel/chanel-main.mov";
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Inner = styled.div`
   .mockup-img {
@@ -106,12 +109,23 @@ const LinkInner = styled.div`
 `;
 
 export default function Chanel() {
+  // AOS
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
     <>
       <Inner>
         <SubpageTitle>CHANEL 22 BAG</SubpageTitle>
         <div className="mockup-img"></div>
-        <div className="desc">
+        <div
+          className="desc"
+          data-aos="fade-up"
+          data-aos-duration="1200"
+          data-aos-easing="ease-in-out"
+          data-aos-delay="100"
+        >
           <Desc title="intro">
             <ul className="intro-li">
               <li>Personal PROJECT </li>

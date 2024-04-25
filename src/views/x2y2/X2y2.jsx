@@ -12,6 +12,9 @@ import designGuide from "../../assets/images/x2y2/x2y2_Style-Guide.jpg";
 import MovePage from "../../components/MovePage";
 import SubpageFooter from "../../components/layout/SubpageFooter";
 import Video from "../../components/Video";
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Inner = styled.div`
   .mockup-img {
@@ -104,6 +107,11 @@ const LinkInner = styled.div`
 `;
 
 export default function X2y2() {
+  // AOS
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
     <>
       <Inner>
@@ -111,7 +119,13 @@ export default function X2y2() {
           &nbsp;NFT MARKETPLACE
         </SubpageTitle>
         <div className="mockup-img"></div>
-        <div className="desc">
+        <div
+          className="desc"
+          data-aos="fade-up"
+          data-aos-duration="1200"
+          data-aos-easing="ease-in-out"
+          data-aos-delay="100"
+        >
           <Desc title="intro">
             <ul className="intro-li">
               <li>Personal PROJECT </li>

@@ -1,5 +1,8 @@
 import styled from "@emotion/styled";
 import macmockup from "../assets//images/comm/MacBook-mockup.png";
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Inner = styled.div`
   display: flex;
@@ -38,6 +41,11 @@ const Inner = styled.div`
 `;
 
 export default function Video(props) {
+  // AOS
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
     <>
       <Inner
@@ -45,6 +53,10 @@ export default function Video(props) {
         width={props.width}
         left={props.left}
         top={props.top}
+        data-aos="fade-up"
+        data-aos-duration="1200"
+        data-aos-easing="ease-in-out"
+        data-aos-delay="100"
       >
         <div className="video-desc">
           <div>{props.children}</div>

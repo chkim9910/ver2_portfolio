@@ -13,6 +13,9 @@ import gnbVideo from "../../assets/videos/kawa/kawa-gnb.mov";
 import mainVideo from "../../assets/videos/kawa/kawa-main-1.mov";
 import sub1Video from "../../assets/videos/kawa/kawa-sub1-1.mov";
 import sub2Video from "../../assets/videos/kawa/kawa-sub2-1.mov";
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Inner = styled.div`
   .mockup-box {
@@ -117,6 +120,11 @@ const LinkInner = styled.div`
 `;
 
 export default function Kawa() {
+  // AOS
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
     <>
       <Inner>
@@ -124,7 +132,13 @@ export default function Kawa() {
         <div className="mockup-box">
           <div className="mockup-img"></div>
         </div>
-        <div className="desc">
+        <div
+          className="desc"
+          data-aos="fade-up"
+          data-aos-duration="1200"
+          data-aos-easing="ease-in-out"
+          data-aos-delay="100"
+        >
           <Desc title="intro">
             <ul className="intro-li">
               <li>Personal PROJECT </li>

@@ -1,4 +1,7 @@
 import styled from "@emotion/styled";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 import tw from "twin.macro";
 
 const Inner = styled.div`
@@ -67,16 +70,44 @@ const SubpageInner = styled.div`
 `;
 
 export function SubpageTitle(props) {
+  // AOS
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
     <>
       <SubpageInner className="title-box" light={props.light}>
-        <div className="inner">
-          <span className="top">RESPONSIVE</span>
+        <div
+          className="inner"
+          data-aos="fade-in"
+          data-aos-duration="1000"
+          data-aos-easing="linear"
+          data-aos-delay="100"
+          /* data-aos-offset="50" */
+        >
+          <span
+            className="top"
+            /* data-aos="fade-in"
+            data-aos-duration="1000"
+            data-aos-easing="linear"
+            data-aos-delay="100" */
+          >
+            RESPONSIVE
+          </span>
           <p className="title">
             <span className="highlight">{props.highlight}</span>
             {props.children}
           </p>
-          <span className="bottom">WEBSITE</span>
+          <span
+            className="bottom"
+            /* data-aos="fade-in"
+            data-aos-duration="1000"
+            data-aos-easing="linear"
+            data-aos-delay="100" */
+          >
+            WEBSITE
+          </span>
         </div>
       </SubpageInner>
     </>

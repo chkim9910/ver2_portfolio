@@ -11,6 +11,9 @@ import designGuide from "../../assets/images/knb/국립발ᄅ�
 import Video from "../../components/Video";
 import gnbVideo from "../../assets/videos/knb/knb-gnb.mov";
 import mainVideo from "../../assets/videos/knb/knb-main-1.mov";
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Inner = styled.div`
   .mockup-img {
@@ -105,12 +108,23 @@ const LinkInner = styled.div`
 `;
 
 export default function Knb() {
+  // AOS
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
     <>
       <Inner>
         <SubpageTitle>국립발레단</SubpageTitle>
         <div className="mockup-img"></div>
-        <div className="desc">
+        <div
+          className="desc"
+          data-aos="fade-up"
+          data-aos-duration="1200"
+          data-aos-easing="ease-in-out"
+          data-aos-delay="100"
+        >
           <Desc title="intro">
             <ul className="intro-li">
               <li>Team PROJECT | 3명</li>
