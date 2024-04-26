@@ -340,7 +340,13 @@ export default function Home() {
     <>
       <Wrap className="wrap">
         {/* section1 */}
-        <section className="section1">
+        <section
+          className="section1"
+          data-aos="fade-in"
+          data-aos-duration="500"
+          data-aos-easing="ease-in-out"
+          data-aos-delay="200"
+        >
           <TopBox className="main-box">
             <h2
               className="title"

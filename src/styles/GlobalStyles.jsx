@@ -23,8 +23,8 @@ const CustomStyles = createGlobalStyle`
   body {
     font-family: "Noto Sans KR", sans-serif;
     line-height: 1.5;
+    overflow-x: hidden;
   }
-
   .title {
     font-family: "MADE Evolve Sans", sans-serif;
     font-weight: 400;

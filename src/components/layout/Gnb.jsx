@@ -9,7 +9,8 @@ const Box = styled.div`
   background: var(--primary);
   position: fixed;
   top: ${(props) => (props.isOpen ? "0" : "-100%")};
-  height: 100%;
+  /* height: 100%; */
+  height: ${(props) => (props.isOpen ? "100svh" : "100%")};
   left: 0;
   right: 0;
   transition: all 0.6s ease-in-out;
@@ -213,22 +214,24 @@ export default function Gnb(props) {
       window.location.href = "/#contact";
     }
   };
-  useEffect(() => {
-    // 페이지가 로드된 후 실행될 함수
-    const handleLoad = () => {
-      if (window.location.hash === "#contact" && projectRef.current) {
-        contactRef.current.scrollIntoView({ behavior: "smooth" });
-      }
-    };
+  useEffect(
+    () => {
+      // 페이지가 로드된 후 실행될 함수
+      const handleLoad = () => {
+        if (window.location.hash === "#contact" && projectRef.current) {
+          contactRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+      };
 
-    // 페이지 로드 이벤트 리스너 등록
-    window.addEventListener("load", handleLoad);
+      // 페이지 로드 이벤트 리스너 등록
+      window.addEventListener("load", handleLoad);
 
-    // 컴포넌트가 언마운트될 때 이벤트 리스너 제거
-    return () => {
-      window.removeEventListener("load", handleLoad);
-    };
-  }, [contactRef]);
+      // 컴포넌트가 언마운트될 때 이벤트 리스너 제거
+      return () => {
+        window.removeEventListener("load", handleLoad);
+      };
+    } /* [contactRef] */
+  );
 
   const closed = () => {
     props.setIsOpen(false);

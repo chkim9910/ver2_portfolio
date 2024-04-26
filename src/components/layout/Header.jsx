@@ -3,8 +3,10 @@ import logo from "../../assets/images/comm/logo.png";
 import logoWhite from "../../assets/images/comm/logo-white.png";
 import tw from "twin.macro";
 import Gnb from "./Gnb";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { RefContext, useRefs } from "../../RefContext";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Box = styled.div`
   padding: 0 3.333vw;
@@ -68,9 +70,19 @@ export default function Header(props) {
   const [isOpen, setIsOpen] = useState(false);
   const { aboutRef, projectRef, contactRef } = useRefs(RefContext);
 
+  // AOS
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <>
-      <Box className="header">
+      <Box
+        className="header"
+        // data-aos="fade-in"
+        // data-aos-duration="800"
+        // data-aos-easing="ease-in-out"
+        // data-aos-delay="500"
+      >
         <Inner className="header-inner">
           <a href="/" className="logo">
             <div
