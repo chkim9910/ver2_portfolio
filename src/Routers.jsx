@@ -14,9 +14,9 @@ const Routers = () => {
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/x2y2" element={<X2y2 />} />
-          <Route path="/CHANEL 22 BAG" element={<Chanel />} />
-          <Route path="/국립발레단" element={<Knb />} />
-          <Route path="/동물자유연대" element={<Kawa />} />
+          <Route path="/chanel22bag" element={<Chanel />} />
+          <Route path="/knb" element={<Knb />} />
+          <Route path="/kawa" element={<Kawa />} />
         </Route>
       </Routes>
     </BrowserRouter>
