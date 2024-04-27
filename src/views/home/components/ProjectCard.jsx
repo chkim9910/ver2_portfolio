@@ -3,6 +3,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { MdArrowForward } from "react-icons/md";
+// import { Link } from "react-router-dom";
 
 const Inner = styled.div`
   max-height: 530px;
@@ -53,15 +54,24 @@ export default function ProjectCard(props) {
   useEffect(() => {
     Aos.init();
   }, []);
+
+  const scrollToTopAndReload = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+    window.location.href = props.url; // 새로운 URL로 이동하여 페이지 새로고침
+  };
   return (
     <>
       <Inner
         img={props.img}
+        onClick={scrollToTopAndReload}
         // data-aos="fade-up"
         // data-aos-duration="1200"
         // data-aos-easing="linear"
       >
-        <a href={"/" + props.url} className="inner">
+        <a href={props.url} className="inner">
           <div className="img"></div>
           <div className="text-box">
             <div className="text-top">

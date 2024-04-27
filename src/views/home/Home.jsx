@@ -543,18 +543,18 @@ export default function Home() {
           </div>
           <Sect3Inner className="project-box">
             <div className="inner">
-              <ProjectCard name="X2Y2" img={x2y2} url="x2y2">
+              <ProjectCard name="X2Y2" img={x2y2} url="/x2y2">
                 responsive website
               </ProjectCard>
-              <ProjectCard name="CHANEL 22 BAG" img={chanel} url="chanel22bag">
+              <ProjectCard name="CHANEL 22 BAG" img={chanel} url="/chanel22bag">
                 responsive website
               </ProjectCard>
             </div>
             <div className="inner">
-              <ProjectCard name="국립발레단" img={knb} url="knb">
+              <ProjectCard name="국립발레단" img={knb} url="/knb">
                 responsive website
               </ProjectCard>
-              <ProjectCard name="동물자유연대" img={kawa} url="kawa">
+              <ProjectCard name="동물자유연대" img={kawa} url="/kawa">
                 responsive website
               </ProjectCard>
             </div>
