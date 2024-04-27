@@ -3,8 +3,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { MdArrowForward } from "react-icons/md";
-// import { Link } from "react-router-dom";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Inner = styled.div`
   max-height: 530px;
@@ -72,7 +71,7 @@ export default function ProjectCard(props) {
         // data-aos-duration="1200"
         // data-aos-easing="linear"
       >
-        <a href={props.url} className="inner">
+        <Link to={props.url} className="inner">
           <div className="img"></div>
           <div className="text-box">
             <div className="text-top">
@@ -84,7 +83,7 @@ export default function ProjectCard(props) {
             </div>
             <p className="desc">{props.children}</p>
           </div>
-        </a>
+        </Link>
       </Inner>
     </>
   );
