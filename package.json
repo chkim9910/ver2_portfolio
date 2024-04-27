@@ -1,7 +1,7 @@
 {
   "name": "my-app",
-  "homepage": "https://github.com/chkim9910/ver2_portfolio",
   "version": "0.1.0",
+  "homepage": "https://chkim9910.github.io/ver2_portfolio/",
   "private": true,
   "dependencies": {
     "@emotion/css": "^11.11.2",
