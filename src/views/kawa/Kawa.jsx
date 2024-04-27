@@ -1,5 +1,5 @@
 import { SubpageTitle } from "../../components/Title";
-import mockup from "../../assets/images/landing-page/동물자유연대_mockup.jpg";
+import mockup from "../../assets/images/landing-page/kawa_mockup.jpg";
 import styled from "@emotion/styled";
 import { MdArrowOutward } from "react-icons/md";
 import MovePage from "../../components/MovePage";
