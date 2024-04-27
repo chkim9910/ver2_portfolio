@@ -8,7 +8,7 @@ import Kawa from "./views/kawa/Kawa";
 
 const Routers = () => {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Home />} />

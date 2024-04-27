@@ -4,6 +4,7 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { MdArrowForward } from "react-icons/md";
 // import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const Inner = styled.div`
   max-height: 530px;
