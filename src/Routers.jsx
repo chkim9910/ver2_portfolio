@@ -1,4 +1,5 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+// import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./views/home/Home";
 import Layout from "./components/layout/Layout";
 import X2y2 from "./views/x2y2/X2y2";
@@ -8,7 +9,7 @@ import Kawa from "./views/kawa/Kawa";
 
 const Routers = () => {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <Router basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Home />} />
@@ -18,7 +19,7 @@ const Routers = () => {
           <Route path="/동물자유연대" element={<Kawa />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 };
 
