@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-// import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./views/home/Home";
 import Layout from "./components/layout/Layout";
 import X2y2 from "./views/x2y2/X2y2";
