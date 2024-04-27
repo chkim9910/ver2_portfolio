@@ -410,7 +410,7 @@ export default function Home() {
           <div
             className="num"
             data-aos="fade-right"
-            data-aos-duration="1200"
+            data-aos-duration="1000"
             data-aos-easing="ease-in-out"
           >
             <p>01</p>
@@ -419,9 +419,9 @@ export default function Home() {
           <Sect2Inner
             className="inner"
             data-aos="fade-up"
-            data-aos-duration="1500"
+            data-aos-duration="1200"
             data-aos-easing="ease-in-out"
-            data-aos-delay="800"
+            data-aos-delay="300"
           >
             <h2
               className="title"
@@ -535,7 +535,7 @@ export default function Home() {
           <div
             className="num"
             data-aos="fade-right"
-            data-aos-duration="1200"
+            data-aos-duration="1000"
             data-aos-easing="ease-in-out"
           >
             <p>02</p>
