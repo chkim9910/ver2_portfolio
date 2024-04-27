@@ -71,7 +71,7 @@ export default function ProjectCard(props) {
         // data-aos-duration="1200"
         // data-aos-easing="linear"
       >
-        <Link to="/x2y2" className="inner">
+        <Link to={props.url} className="inner">
           <div className="img"></div>
           <div className="text-box">
             <div className="text-top">
