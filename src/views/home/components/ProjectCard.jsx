@@ -60,7 +60,7 @@ export default function ProjectCard(props) {
       top: 0,
       behavior: "smooth",
     });
-    window.location.href = props.url; // 새로운 URL로 이동하여 페이지 새로고침
+    // window.location.href = props.url; // 새로운 URL로 이동하여 페이지 새로고침
   };
   return (
     <>
