@@ -5,10 +5,12 @@ import X2y2 from "./views/x2y2/X2y2";
 import Chanel from "./views/chanel/Chanel";
 import Knb from "./views/knb/Knb";
 import Kawa from "./views/kawa/Kawa";
+import ScrollToTop from "./components/layout/ScrollToTop";
 
 const Routers = () => {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Home />} />
