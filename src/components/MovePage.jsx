@@ -47,7 +47,7 @@ const Inner = styled.div`
     width: fit-content;
   }
   .arr-icon {
-    font-size: 42px;
+    font-size: 42px !important;
   }
   .text-box {
     display: flex;
