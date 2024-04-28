@@ -254,7 +254,12 @@ export default function Chanel() {
               <div className="space"></div>
             </LinkInner>
           </DescLine>
-          <MovePage left="x2y2" right="국립발레단"></MovePage>
+          <MovePage
+            left="x2y2"
+            right="국립발레단"
+            lefturl="/x2y2"
+            righturl="/knb"
+          ></MovePage>
           <SubpageFooter
             github="https://github.com/chkim9910/Chanel22bag-Renewal"
             figma="https://www.figma.com/file/U40tBrD4nOVaZRgRGRpkDD/CHANEL-22-bag?type=design&node-id=0%3A1&mode=design&t=mC9Tuda9RpjkOlUP-1"

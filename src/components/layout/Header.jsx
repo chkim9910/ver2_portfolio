@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { RefContext, useRefs } from "../../RefContext";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 
 const Box = styled.div`
   padding: 0 3.333vw;
@@ -84,12 +85,12 @@ export default function Header(props) {
         // data-aos-delay="500"
       >
         <Inner className="header-inner">
-          <a href="/" className="logo">
+          <Link to="/" className="logo">
             <div
               className={`logo-img ${isOpen ? "white" : ""}`}
               isOpen={isOpen}
             ></div>
-          </a>
+          </Link>
           <Input
             type="checkbox"
             id="menu"

@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { MdArrowForward } from "react-icons/md";
 import { MdArrowBack } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Inner = styled.div`
   margin-top: 120px;
@@ -64,7 +65,7 @@ export default function MovePage(props) {
   return (
     <>
       <Inner className="inner">
-        <a href={"/" + props.left} className="box left">
+        <Link to={props.lefturl} className="box left">
           <span className="arr-icon">
             <MdArrowBack />
           </span>
@@ -72,8 +73,8 @@ export default function MovePage(props) {
             <h3 className="title">{props.left}</h3>
             <span className="sub-text">Responsive website</span>
           </div>
-        </a>
-        <a href={"/" + props.right} className="box right">
+        </Link>
+        <Link to={props.righturl} className="box right">
           <div className="text-box">
             <h3 className="title">{props.right}</h3>
             <span className="sub-text">Responsive website</span>
@@ -81,7 +82,7 @@ export default function MovePage(props) {
           <span className="arr-icon">
             <MdArrowForward />
           </span>
-        </a>
+        </Link>
       </Inner>
     </>
   );

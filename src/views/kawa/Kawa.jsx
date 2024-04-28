@@ -312,7 +312,12 @@ export default function Kawa() {
               </a>
             </LinkInner>
           </DescLine>
-          <MovePage left="국립발레단" right="x2y2"></MovePage>
+          <MovePage
+            left="국립발레단"
+            right="x2y2"
+            lefturl="/knb"
+            righturl="/x2y2"
+          ></MovePage>
           <SubpageFooter
             github="https://github.com/chkim9910/KAWA-Renewal"
             figma="https://www.figma.com/file/oGmHO1S6dBk6dJOjPv28mk/%EB%8F%99%EB%AC%BC%EC%9E%90%EC%9C%A0%EC%97%B0%EB%8C%80?type=design&node-id=0-1&mode=design&t=K6VMelMtl3o5qHrP-0"
