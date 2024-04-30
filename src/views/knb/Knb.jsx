@@ -1,5 +1,5 @@
 import { SubpageTitle } from "../../components/Title";
-import mockup from "../../assets/images/landing-page/v2_국립발레단_mockup.jpg";
+import mockup from "../../assets/images/landing-page/v2_knb_mockup.jpg";
 import styled from "@emotion/styled";
 import { MdArrowOutward } from "react-icons/md";
 import MovePage from "../../components/MovePage";
@@ -7,7 +7,7 @@ import SubpageFooter from "../../components/layout/SubpageFooter";
 import Desc from "../../components/Desc";
 import DescLineInner from "../../components/DescLineInner";
 import DescLine from "../../components/DescLine";
-import designGuide from "../../assets/images/knb/국립발레단_Style-Guide.jpg";
+import designGuide from "../../assets/images/knb/knb_Style-Guide.jpg";
 import Video from "../../components/Video";
 import gnbVideo from "../../assets/videos/knb/knb-gnb.mov";
 import mainVideo from "../../assets/videos/knb/knb-main-1.mov";

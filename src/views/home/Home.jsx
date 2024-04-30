@@ -342,10 +342,10 @@ export default function Home() {
         {/* section1 */}
         <section
           className="section1"
-          data-aos="fade-in"
-          data-aos-duration="500"
-          data-aos-easing="ease-in-out"
-          data-aos-delay="200"
+          // data-aos="fade-in"
+          // data-aos-duration="500"
+          // data-aos-easing="ease-in-out"
+          // data-aos-delay="200"
         >
           <TopBox className="main-box">
             <h2
@@ -362,7 +362,7 @@ export default function Home() {
               data-aos="fade-in"
               data-aos-duration="800"
               data-aos-easing="ease-in-out"
-              data-aos-delay="1200"
+              data-aos-delay="400"
             >
               2024 포트폴리오는 퍼블리싱에 발을 내딛은 2023년 하반기부터 step by
               step으로 배우며 만든 프로젝트들을 정리한 결과물입니다. 현재는 개발
@@ -378,7 +378,7 @@ export default function Home() {
               data-aos="fade-in"
               data-aos-duration="1000"
               data-aos-easing="linear"
-              data-aos-delay="2000"
+              data-aos-delay="800"
             />
           </TopBox>
           <BottomBox className="bottom-box">
@@ -564,8 +564,8 @@ export default function Home() {
         <section className="section4">
           <Sect4Inner
             className="inner"
-            data-aos="fade-up"
-            data-aos-duration="1200"
+            data-aos="fade-in"
+            data-aos-duration="1000"
             data-aos-easing="ease-in-out"
             // data-aos-delay="50"
           >

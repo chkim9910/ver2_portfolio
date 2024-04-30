@@ -7,7 +7,7 @@ import SubpageFooter from "../../components/layout/SubpageFooter";
 import DescLine from "../../components/DescLine";
 import Desc from "../../components/Desc";
 import DescLineInner from "../../components/DescLineInner";
-import designGuide from "../../assets/images/kawa/동물자유연대_Style-Guide.jpg";
+import designGuide from "../../assets/images/kawa/kawa_Style-Guide.jpg";
 import Video from "../../components/Video";
 import gnbVideo from "../../assets/videos/kawa/kawa-gnb.mov";
 import mainVideo from "../../assets/videos/kawa/kawa-main-1.mov";
