@@ -7,6 +7,8 @@ import Layout from "./components/layout/Layout";
 // import Kawa from "./views/kawa/Kawa";
 import ScrollToTop from "./components/layout/ScrollToTop";
 import React, { Suspense } from "react";
+import { PulseLoader } from "react-spinners";
+import tw from "twin.macro";
 
 // Lazy loading the components
 const Home = React.lazy(() => import("./views/home/Home"));
@@ -15,11 +17,21 @@ const Chanel = React.lazy(() => import("./views/chanel/Chanel"));
 const Knb = React.lazy(() => import("./views/knb/Knb"));
 const Kawa = React.lazy(() => import("./views/kawa/Kawa"));
 
+const SpinnerBox = tw.div`
+flex justify-center items-center
+`;
+
 const Routers = () => {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <ScrollToTop />
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense
+        fallback={
+          <SpinnerBox className="loading-spinner">
+            <PulseLoader color="#2897A5" />
+          </SpinnerBox>
+        }
+      >
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route path="/" element={<Home />} />
