@@ -10,7 +10,7 @@ import DescLine from "../../components/DescLine";
 import designGuide from "../../assets/images/knb/knb_Style-Guide.jpg";
 import Video from "../../components/Video";
 import gnbVideo from "../../assets/videos/knb/knb-gnb.mov";
-import gnbVideoWebm from "../../assets/videos/knb/knb-gnb.mov";
+import gnbVideoWebm from "../../assets/videos/knb/knb-gnb.webm";
 import mainVideo from "../../assets/videos/knb/knb-main-1.mov";
 import mainVideoWebm from "../../assets/videos/knb/knb-main-1.webm";
 import { useEffect } from "react";
