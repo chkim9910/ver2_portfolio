@@ -3,8 +3,11 @@ import styled from "@emotion/styled";
 import mockup from "../../assets/images/landing-page/chanel_mockup.jpg";
 import designGuide from "../../assets/images/chanel/chanel_Style-Guide.jpg";
 import introVideo from "../../assets/videos/chanel/chanel-intro.mov";
+import introVideoWebm from "../../assets/videos/chanel/chanel-intro.webm";
 import gnbVideo from "../../assets/videos/chanel/chanel-gnb.mov";
+import gnbVideoWebm from "../../assets/videos/chanel/chanel-gnb.webm";
 import mainVideo from "../../assets/videos/chanel/chanel-main.mov";
+import mainVideoWebm from "../../assets/videos/chanel/chanel-main.webm";
 import { MdArrowOutward } from "react-icons/md";
 import MovePage from "../../components/MovePage";
 import SubpageFooter from "../../components/layout/SubpageFooter";
@@ -211,7 +214,13 @@ export default function Chanel() {
             <img src={designGuide} alt="x2y2 design system" width={"1200px"} />
           </Desc>
           <Desc title="details">
-            <Video src={introVideo} width="83%" left="50.3%" top="-29.1%">
+            <Video
+              srcWebm={introVideoWebm}
+              srcMov={introVideo}
+              width="83%"
+              left="50.3%"
+              top="-29.1%"
+            >
               <h2 className="title video-subtitle">intro page</h2>
               <p>
                 intro page는 CHANEL 22 BAG의 캠페인 영상을 활용해
@@ -219,7 +228,13 @@ export default function Chanel() {
                 CHANEL 버튼을 클릭하면 메인 페이지로 이동합니다.
               </p>
             </Video>
-            <Video src={gnbVideo} width="83%" left="50.3%" top="-29.1%">
+            <Video
+              srcWebm={gnbVideoWebm}
+              srcMov={gnbVideo}
+              width="83%"
+              left="50.3%"
+              top="-29.1%"
+            >
               <h2 className="title video-subtitle">gnb page</h2>
               <p>
                 Parallax.js 라이브러리를 사용하여 마우스 움직임에 반응하는
@@ -227,7 +242,13 @@ export default function Chanel() {
                 메뉴에 highlight을 주었습니다.
               </p>
             </Video>
-            <Video src={mainVideo} width="83%" left="50.3%" top="-29.1%">
+            <Video
+              srcWebm={mainVideoWebm}
+              srcMov={mainVideo}
+              width="83%"
+              left="50.3%"
+              top="-29.1%"
+            >
               <h2 className="title video-subtitle">main page</h2>
               <p>
                 CHANEL 22 BAG의 스토리 소개 섹션으로 시작하여, 4명의 앰버서더의
