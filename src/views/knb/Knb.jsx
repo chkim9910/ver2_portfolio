@@ -10,7 +10,9 @@ import DescLine from "../../components/DescLine";
 import designGuide from "../../assets/images/knb/knb_Style-Guide.jpg";
 import Video from "../../components/Video";
 import gnbVideo from "../../assets/videos/knb/knb-gnb.mov";
+import gnbVideoWebm from "../../assets/videos/knb/knb-gnb.mov";
 import mainVideo from "../../assets/videos/knb/knb-main-1.mov";
+import mainVideoWebm from "../../assets/videos/knb/knb-main-1.webm";
 import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -219,7 +221,12 @@ export default function Knb() {
             <img src={designGuide} alt="x2y2 design system" width={"1200px"} />
           </Desc>
           <Desc title="details">
-            <Video src={gnbVideo} width="83%" left="50.3%">
+            <Video
+              srcWebm={gnbVideoWebm}
+              srcMov={gnbVideo}
+              width="83%"
+              left="50.3%"
+            >
               <h2 className="title video-subtitle">gnb</h2>
               <p>
                 header 제작을 담당하였습니다. 메뉴에 mouse hover 시 하위 메뉴가
@@ -227,7 +234,12 @@ export default function Knb() {
                 highlight을 주었습니다.
               </p>
             </Video>
-            <Video src={mainVideo} width="83%" left="50.3%">
+            <Video
+              srcWebm={mainVideoWebm}
+              srcMov={mainVideo}
+              width="83%"
+              left="50.3%"
+            >
               <h2 className="title video-subtitle">
                 공연정보 page (sub2 page)
               </h2>
