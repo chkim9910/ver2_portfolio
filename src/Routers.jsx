@@ -18,7 +18,7 @@ const Knb = React.lazy(() => import("./views/knb/Knb"));
 const Kawa = React.lazy(() => import("./views/kawa/Kawa"));
 
 const SpinnerBox = tw.div`
-flex justify-center items-center
+flex justify-center items-center h-screen
 `;
 
 const Routers = () => {
