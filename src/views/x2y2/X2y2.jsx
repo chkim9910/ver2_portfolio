@@ -2,8 +2,11 @@ import { SubpageTitle } from "../../components/Title";
 import mockup from "../../assets/images/landing-page/x2y2_mockup.jpg";
 import designGuide from "../../assets/images/x2y2/x2y2_Style-Guide.jpg";
 import mainVideo from "../../assets/videos/x2y2/x2y2-main.mov";
+import mainVideoWebm from "../../assets/videos/x2y2/x2y2-main.webm";
 import sub1Video from "../../assets/videos/x2y2/x2y2-sub1.mov";
+import sub1VideoWebm from "../../assets/videos/x2y2/x2y2-sub1.webm";
 import sub2Video from "../../assets/videos/x2y2/x2y2-sub2.mov";
+import sub2VideoWebm from "../../assets/videos/x2y2/x2y2-sub2.webm";
 import styled from "@emotion/styled";
 import Desc from "../../components/Desc";
 import { MdArrowOutward } from "react-icons/md";
@@ -210,7 +213,7 @@ export default function X2y2() {
             <img src={designGuide} alt="x2y2 design system" width={"850px"} />
           </Desc>
           <Desc title="details">
-            <Video src={mainVideo}>
+            <Video srcWebm={mainVideoWebm} srcMov={mainVideo}>
               <h2 className="title video-subtitle">main page</h2>
               <p>
                 랜딩페이지는 Swiper.js로 구현한 nft 상품을 소개하는 슬라이드로
@@ -223,7 +226,7 @@ export default function X2y2() {
                 섹션으로 마무리됩니다.
               </p>
             </Video>
-            <Video src={sub1Video}>
+            <Video srcWebm={sub1VideoWebm} srcMov={sub1Video}>
               <h2 className="title video-subtitle">Collection page</h2>
               <p>
                 작가에 대한 소개와 작품의 시세를 확인할 수 있는 미니 table을
@@ -233,7 +236,7 @@ export default function X2y2() {
                 작품을 클릭하면 작품 상세 페이지로 이동합니다.
               </p>
             </Video>
-            <Video src={sub2Video}>
+            <Video srcWebm={sub2VideoWebm} srcMov={sub2Video}>
               <h2 className="title video-subtitle">details page</h2>
               <p>
                 작품의 상세 정보를 담고 있는 페이지입니다. 하단에 More from this
