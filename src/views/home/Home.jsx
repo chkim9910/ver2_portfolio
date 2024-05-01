@@ -69,20 +69,25 @@ const TopBox = styled.div`
   flex: 1;
   padding-top: 120px;
 
-  .title {
+  /* .title {
     width: fit-content;
     height: 200px;
     font-size: 160px;
     font-weight: 300;
     letter-spacing: -2px;
     text-align: center;
+  } */
+  .title {
+    height: 200px;
+    width: 880px;
   }
   .desc {
     width: 850px;
     font-weight: 300;
     word-break: keep-all;
   }
-  span {
+
+  .highlight-text {
     color: var(--primary);
     font-weight: 400;
   }
@@ -99,6 +104,67 @@ const TopBox = styled.div`
     }
     100% {
       top: 16px;
+    }
+  }
+`;
+const SVG = styled.svg`
+  /* font-size: 160px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text {
+    font-family: "MADE Evolve Sans", sans-serif;
+    font-size: 190px;
+    /* font-size: 166px; */
+    font-weight: 300;
+    letter-spacing: -2px;
+    text-anchor: middle;
+    alignment-baseline: middle;
+    transform: translate(50%, 50%);
+    fill: black;
+    /* fill: transparent; */
+    stroke: black;
+    /* stroke: var(--primary); */
+    stroke-dasharray: 1000px;
+    stroke-width: 2px;
+    animation: stroke 5s linear;
+  }
+  /* text:nth-child(1) {
+    animation-delay: 0s;
+  }
+  text:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+  text:nth-child(3) {
+    animation-delay: 1s;
+  }
+  text:nth-child(4) {
+    animation-delay: 1.5s;
+  }
+  text:nth-child(5) {
+    animation-delay: 2s;
+  }
+  text:nth-child(6) {
+    animation-delay: 2.5s;
+  }
+  text:nth-child(7) {
+    animation-delay: 3s;
+  }
+  text:nth-child(8) {
+    animation-delay: 3.5s;
+  } */
+
+  @keyframes stroke {
+    0% {
+      stroke-dashoffset: 1000px;
+      fill: transparent;
+    }
+    73% {
+      stroke-dashoffset: 0px;
+      fill: transparent;
+    }
+    100% {
+      fill: black;
     }
   }
 `;
@@ -348,7 +414,7 @@ export default function Home() {
           // data-aos-delay="200"
         >
           <TopBox className="main-box">
-            <h2
+            {/* <h2
               className="title"
               data-aos="fade-in"
               data-aos-duration="1400"
@@ -356,29 +422,144 @@ export default function Home() {
               data-aos-delay="100"
             >
               CHOHYANG
-            </h2>
+            </h2> */}
+            {/* <svg
+              className="title"
+              version="1.0"
+              xmlns="http://www.w3.org/2000/svg"
+              width="885.000000pt"
+              height="138.000000pt"
+              viewBox="0 0 885.000000 138.000000"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              <g
+                className="chohyang"
+                transform="translate(0.000000,138.000000) scale(0.100000,-0.100000)"
+                fill="#000000"
+                stroke="none"
+              >
+                <path
+                  className="c-letter"
+                  d="M430 1244 c-201 -53 -356 -216 -406 -429 -26 -111 -15 -266 25 -375
+58 -158 179 -282 331 -337 66 -25 89 -28 195 -28 99 0 132 4 186 23 75 26 138
+63 199 118 40 36 106 122 98 128 -1 2 -22 13 -44 24 l-42 21 -35 -45 c-168
+-216 -488 -238 -675 -46 -281 287 -150 779 228 858 164 34 356 -39 450 -170
+l33 -45 41 21 c22 11 43 22 44 24 9 7 -61 95 -109 138 -59 53 -169 109 -247
+125 -73 15 -206 13 -272 -5z"
+                />
+                <path
+                  className="h1-letter"
+                  d="M1240 665 l0 -585 45 0 45 0 0 270 0 270 355 0 355 0 0 -270 0 -270
+45 0 45 0 0 585 0 585 -45 0 -45 0 0 -270 0 -270 -352 2 -353 3 -3 268 -2 267
+-45 0 -45 0 0 -585z"
+                />
+                <path
+                  className="o-letter"
+                  d="M2760 1244 c-201 -53 -356 -216 -406 -429 -26 -111 -15 -266 25 -375
+58 -158 179 -282 331 -337 66 -25 89 -28 195 -28 141 0 217 21 315 86 161 108
+252 289 252 499 0 127 -14 189 -64 290 -72 149 -203 256 -359 294 -80 20 -215
+20 -289 0z m220 -85 c100 -16 178 -58 250 -136 107 -114 146 -226 138 -393 -7
+-129 -45 -222 -129 -314 -216 -235 -585 -185 -736 100 -158 296 0 672 310 739
+78 17 88 17 167 4z"
+                />
+                <path
+                  className="h2-letter"
+                  d="M3690 665 l0 -585 45 0 45 0 0 270 0 270 355 0 355 0 0 -270 0 -270
+45 0 45 0 0 585 0 585 -45 0 -45 0 0 -270 0 -270 -352 2 -353 3 -3 268 -2 267
+-45 0 -45 0 0 -585z"
+                />
+                <path
+                  className="y-letter"
+                  d="M4723 1243 c3 -5 97 -173 211 -376 l206 -367 0 -210 0 -210 50 0 50
+0 0 213 1 212 208 370 208 370 -51 3 c-35 2 -54 -1 -61 -11 -5 -8 -86 -152
+-180 -320 -93 -169 -172 -307 -175 -307 -3 0 -85 144 -183 320 l-179 320 -55
+0 c-30 0 -52 -3 -50 -7z"
+                />
+                <path
+                  className="a-letter"
+                  d="M5798 683 c-119 -313 -220 -576 -224 -586 -6 -16 -1 -18 45 -15 l53
+3 66 175 67 175 247 3 247 2 14 -27 c8 -16 40 -97 72 -180 l57 -153 50 0 c36
+0 49 4 46 13 -3 6 -103 270 -223 585 l-218 572 -41 0 -42 0 -216 -567z m366
+127 c58 -151 104 -276 102 -277 -2 -2 -98 -2 -213 -1 l-210 3 105 278 c58 152
+106 276 108 274 2 -1 50 -126 108 -277z"
+                />
+                <path
+                  className="n-letter"
+                  d="M6690 665 l0 -585 45 0 45 0 0 501 c0 400 3 499 13 491 6 -6 167
+-231 357 -501 l345 -490 43 -1 42 0 0 585 0 585 -45 0 -45 0 -2 -495 -3 -496
+-353 496 -352 495 -45 0 -45 0 0 -585z"
+                />
+                <path
+                  className="g-letter"
+                  d="M8220 1244 c-201 -53 -356 -216 -406 -429 -26 -111 -15 -266 25 -375
+80 -216 262 -354 486 -367 199 -12 366 59 480 204 l45 58 0 168 0 167 -240 0
+-240 0 0 -45 0 -45 195 0 195 0 0 -106 0 -105 -55 -59 c-222 -232 -601 -175
+-746 111 -155 309 17 687 336 739 158 26 345 -49 435 -174 l33 -45 41 21 c22
+11 43 22 44 24 9 7 -61 95 -109 138 -59 53 -169 109 -247 125 -73 15 -206 13
+-272 -5z"
+                />
+              </g>
+            </svg> */}
+            <SVG
+              width="890px"
+              height="180px"
+              viewBox="0 0 890 200"
+              data-aos="fade-in"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+            >
+              {/* <text>CHOHYANG</text> */}
+              <text x="-51%" y="10%">
+                C
+              </text>
+              <text x="-36%" y="10%">
+                H
+              </text>
+              <text x="-21%" y="10%">
+                O
+              </text>
+              <text x="-6%" y="10%">
+                H
+              </text>
+              <text x="8%" y="10%">
+                Y
+              </text>
+              <text x="17.5%" y="10%">
+                A
+              </text>
+              <text x="31%" y="10%">
+                N
+              </text>
+              <text x="45.5%" y="10%">
+                G
+              </text>
+            </SVG>
+
             <p
               className="desc"
               data-aos="fade-in"
               data-aos-duration="800"
               data-aos-easing="ease-in-out"
-              data-aos-delay="400"
+              data-aos-delay="3000"
             >
               2024 포트폴리오는 퍼블리싱에 발을 내딛은 2023년 하반기부터 step by
-              step으로 배우며 만든 프로젝트들을 정리한 결과물입니다. 현재는 개발
-              블로그를 운영하며 사용자 관점의 ui/ux 디자인 공부와 프론트앤드
-              개발 공부를 기록으로 남기고 있습니다. <br />
-              <span>
+              step으로 배우며 만든 프로젝트들을 정리한 결과물입니다.
+              {/* <p>
+              현재는 개발 블로그를 운영하며 사용자 관점의 ui/ux 디자인 공부와
+              프론트앤드 개발 공부를 기록으로 남기고 있습니다.
+            </p> */}
+              <span className="highlight-text">
                 엉덩이 오래 붙드는 웹퍼블리셔 김초향의 성장 이야기를 들어보세요.
               </span>
             </p>
+
             <img
               src={arr}
               alt="화살표"
               data-aos="fade-in"
               data-aos-duration="1000"
               data-aos-easing="linear"
-              data-aos-delay="800"
+              data-aos-delay="3000"
             />
           </TopBox>
           <BottomBox className="bottom-box">
