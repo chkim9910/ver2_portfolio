@@ -63,7 +63,11 @@ export default function Video(props) {
         </div>
         <div className="video-box main-video">
           <div className="mac-mockup"></div>
-          <video src={props.src} loop muted autoPlay></video>
+          <video loop muted autoPlay>
+            <source src={props.srcWebm} type="video/webm" />
+            <source src={props.srcMov} type="video/mov" />
+            Sorry, your browser doesn't support embedded videos. 출처:
+          </video>
         </div>
       </Inner>
     </>
