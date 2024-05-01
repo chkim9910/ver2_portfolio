@@ -10,9 +10,13 @@ import DescLineInner from "../../components/DescLineInner";
 import designGuide from "../../assets/images/kawa/kawa_Style-Guide.jpg";
 import Video from "../../components/Video";
 import gnbVideo from "../../assets/videos/kawa/kawa-gnb.mov";
+import gnbVideoWebm from "../../assets/videos/kawa/kawa-gnb.mov";
 import mainVideo from "../../assets/videos/kawa/kawa-main-1.mov";
+import mainVideoWebm from "../../assets/videos/kawa/kawa-main-1.webm";
 import sub1Video from "../../assets/videos/kawa/kawa-sub1-1.mov";
+import sub1VideoWebm from "../../assets/videos/kawa/kawa-sub1-1.webm";
 import sub2Video from "../../assets/videos/kawa/kawa-sub2-1.mov";
+import sub2VideoWebm from "../../assets/videos/kawa/kawa-sub2-1.webm";
 import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -229,7 +233,12 @@ export default function Kawa() {
             <img src={designGuide} alt="x2y2 design system" width={"1200px"} />
           </Desc>
           <Desc title="details">
-            <Video src={gnbVideo} width="83%" left="50.3%">
+            <Video
+              srcWebm={gnbVideoWebm}
+              srcMov={gnbVideo}
+              width="83%"
+              left="50.3%"
+            >
               <h2 className="title video-subtitle">gnb</h2>
               <p>
                 gnb에 mouse hover 시 전체 메뉴가 보이도록 제작하였습니다.
@@ -237,7 +246,12 @@ export default function Kawa() {
                 변화로 highlight을 주었습니다.
               </p>
             </Video>
-            <Video src={mainVideo} width="83%" left="50.3%">
+            <Video
+              srcWebm={mainVideoWebm}
+              srcMov={mainVideo}
+              width="83%"
+              left="50.3%"
+            >
               <h2 className="title video-subtitle">main page</h2>
               <p>
                 랜딩페이지는 메인 캠페인 소개 섹션을 시작으로 주요활동, 온센터,
@@ -248,7 +262,12 @@ export default function Kawa() {
                 구현하였습니다.
               </p>
             </Video>
-            <Video src={sub1Video} width="83%" left="50.3%">
+            <Video
+              srcWebm={sub1VideoWebm}
+              srcMov={sub1Video}
+              width="83%"
+              left="50.3%"
+            >
               <h2 className="title video-subtitle">
                 미션&비전 page (sub1 page)
               </h2>
@@ -260,7 +279,12 @@ export default function Kawa() {
                 섹션은 horizontal 슬라이드로 구현하여 가독성을 높였습니다.
               </p>
             </Video>
-            <Video src={sub2Video} width="83%" left="50.3%">
+            <Video
+              srcWebm={sub2VideoWebm}
+              srcMov={sub2Video}
+              width="83%"
+              left="50.3%"
+            >
               <h2 className="title video-subtitle">
                 후원안내 page (sub2 page)
               </h2>
