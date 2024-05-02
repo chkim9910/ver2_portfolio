@@ -172,7 +172,7 @@ const GnbBox = styled.div`
   }
   @media screen and (max-width: 480px) {
     li {
-      color: rgba(255, 255, 255, 0.8);
+      color: rgba(255, 255, 255, 1);
       height: 75px;
       font-size: 50px;
     }
@@ -196,7 +196,8 @@ const GnbBox = styled.div`
   }
   @media screen and (max-width: 480px) {
     li:hover {
-      color: rgba(255, 255, 255, 1);
+      color: #52ebff;
+      /* color: rgba(255, 255, 255, 1); */
     }
   }
   span {
@@ -207,7 +208,11 @@ const GnbBox = styled.div`
   }
   @media screen and (max-width: 480px) {
     span {
-      color: rgba(255, 255, 255, 0.5);
+      transition: all 0.8s cubic-bezier(0.1, 0.5, 0.5, 1);
+    }
+    li:hover span {
+      color: #51ebff;
+      /* color: rgba(255, 255, 255, 1); */
     }
   }
   .inner-line {
