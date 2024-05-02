@@ -172,7 +172,7 @@ const GnbBox = styled.div`
   }
   @media screen and (max-width: 480px) {
     li {
-      color: rgba(255, 255, 255, 0.5);
+      color: rgba(255, 255, 255, 0.8);
       height: 75px;
       font-size: 50px;
     }
@@ -197,8 +197,6 @@ const GnbBox = styled.div`
   @media screen and (max-width: 480px) {
     li:hover {
       color: rgba(255, 255, 255, 1);
-      height: 70px;
-      font-size: 50px;
     }
   }
   span {
