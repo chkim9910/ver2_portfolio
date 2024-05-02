@@ -124,7 +124,7 @@ const TopBox = styled.div`
   }
   @media screen and (max-width: 480px) {
     .desc {
-      width: 320px;
+      width: 330px;
       font-size: 12px;
     }
   }
@@ -540,9 +540,9 @@ export default function Home() {
             <p
               className="desc"
               data-aos="fade-in"
-              data-aos-duration="800"
+              data-aos-duration="2000"
               data-aos-easing="ease-in-out"
-              data-aos-delay="2500"
+              data-aos-delay="2000"
             >
               2024 포트폴리오는 퍼블리싱에 발을 내딛은 2023년 하반기부터 step by
               step으로 배우며 만든 프로젝트들을 정리한 결과물입니다.

@@ -172,6 +172,7 @@ const GnbBox = styled.div`
   }
   @media screen and (max-width: 480px) {
     li {
+      color: rgba(255, 255, 255, 0.5);
       height: 70px;
       font-size: 50px;
     }
@@ -187,6 +188,13 @@ const GnbBox = styled.div`
     background: linear-gradient(to right, white, white) no-repeat;
     background-clip: text;
     background-size: 100%;
+  }
+  @media screen and (max-width: 480px) {
+    li:hover {
+      color: rgba(255, 255, 255, 1);
+      height: 70px;
+      font-size: 50px;
+    }
   }
   span {
     color: white;
