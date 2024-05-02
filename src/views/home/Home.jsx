@@ -493,7 +493,14 @@ export default function Home() {
               // data-aos-delay="100"
             >
               {/* CHOHYANG */}
-              <img src={title} alt="chohyang" />
+              <img
+                src={title}
+                alt="chohyang"
+                data-aos="fade-in"
+                data-aos-duration="2000"
+                data-aos-easing="ease-in-out"
+                data-aos-delay="500"
+              />
             </h2>
             <SVG
               width="890px"
@@ -535,7 +542,7 @@ export default function Home() {
               data-aos="fade-in"
               data-aos-duration="800"
               data-aos-easing="ease-in-out"
-              data-aos-delay="3000"
+              data-aos-delay="2500"
             >
               2024 포트폴리오는 퍼블리싱에 발을 내딛은 2023년 하반기부터 step by
               step으로 배우며 만든 프로젝트들을 정리한 결과물입니다.
