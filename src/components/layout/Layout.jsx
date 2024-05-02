@@ -7,9 +7,15 @@ import { RefContext } from "../../RefContext";
 const Box = styled.div`
   max-width: 1280px;
   margin: 0 auto;
-  @media screen and (max-width: 1280px) {
+  @media screen and (min-width: 768px) and (max-width: 1280px) {
     padding: 0 3.333vw;
     overflow: hidden;
+  }
+  @media screen and (min-width: 480px) and (max-width: 768px) {
+    padding: 0 28px;
+  }
+  @media screen and (max-width: 480px) {
+    padding: 0 16px;
   }
 `;
 

@@ -17,6 +17,14 @@ const Box = styled.div`
   left: 0;
   width: 100%;
   position: fixed;
+  @media screen and (min-width: 480px) and (max-width: 768px) {
+    padding: 0 28px;
+    padding-top: 30px;
+  }
+  @media screen and (max-width: 480px) {
+    padding: 0 16px;
+    padding-top: 30px;
+  }
 `;
 const Inner = styled.div`
   z-index: 200;
