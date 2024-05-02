@@ -68,23 +68,64 @@ const TopBox = styled.div`
   align-items: center;
   flex: 1;
   padding-top: 120px;
-
-  /* .title {
-    width: fit-content;
-    height: 200px;
-    font-size: 160px;
-    font-weight: 300;
-    letter-spacing: -2px;
-    text-align: center;
-  } */
-  .title {
-    height: 200px;
-    width: 880px;
+  .tablet-mobile-title {
+    display: none;
+  }
+  @media screen and (max-width: 1024px) {
+    .tablet-mobile-title {
+      display: block;
+      width: fit-content;
+      height: 170px;
+      font-size: 130px;
+      font-weight: 300;
+      letter-spacing: -2px;
+      text-align: center;
+      -webkit-text-stroke: 2px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .tablet-mobile-title {
+      display: block;
+      width: 450px;
+      height: 110px;
+      font-size: 84px;
+      font-weight: 300;
+      letter-spacing: -2px;
+      text-align: center;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .tablet-mobile-title {
+      display: block;
+      width: fit-content;
+      height: 90px;
+      font-size: 60px;
+      font-weight: 300;
+      letter-spacing: -2px;
+      text-align: center;
+    }
   }
   .desc {
     width: 850px;
     font-weight: 300;
     word-break: keep-all;
+  }
+  @media screen and (max-width: 1024px) {
+    .desc {
+      width: 700px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .desc {
+      width: 450px;
+      font-size: 15px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .desc {
+      width: 320px;
+      font-size: 12px;
+    }
   }
 
   .highlight-text {
@@ -97,6 +138,21 @@ const TopBox = styled.div`
     position: relative;
     top: 0;
     animation: arrAni 0.8s linear infinite alternate;
+  }
+  @media screen and (max-width: 1024px) {
+    img {
+      height: 90px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    img {
+      height: 70px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    img {
+      height: 60px;
+    }
   }
   @keyframes arrAni {
     0% {
@@ -129,31 +185,9 @@ const SVG = styled.svg`
     stroke-width: 2px;
     animation: stroke 5s linear;
   }
-  /* text:nth-child(1) {
-    animation-delay: 0s;
+  @media screen and (max-width: 1024px) {
+    display: none;
   }
-  text:nth-child(2) {
-    animation-delay: 0.5s;
-  }
-  text:nth-child(3) {
-    animation-delay: 1s;
-  }
-  text:nth-child(4) {
-    animation-delay: 1.5s;
-  }
-  text:nth-child(5) {
-    animation-delay: 2s;
-  }
-  text:nth-child(6) {
-    animation-delay: 2.5s;
-  }
-  text:nth-child(7) {
-    animation-delay: 3s;
-  }
-  text:nth-child(8) {
-    animation-delay: 3.5s;
-  } */
-
   @keyframes stroke {
     0% {
       stroke-dashoffset: 1000px;
@@ -187,9 +221,25 @@ const BottomBox = styled.div`
     font-size: 14px;
     font-weight: 400;
   }
+  @media screen and (max-width: 767px) {
+    .copyright {
+      font-size: 12px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .copyright {
+      font-size: 10px;
+    }
+  }
   .icon-box {
     display: flex;
-    gap: 24px;
+    gap: 18px;
+    align-items: center;
+  }
+  @media screen and (max-width: 767px) {
+    .icon-box {
+      gap: 10px;
+    }
   }
   .github-icon {
     font-size: 36px;
@@ -198,6 +248,16 @@ const BottomBox = styled.div`
     transition: all 0.3s;
     width: fit-content;
     height: fit-content;
+  }
+  @media screen and (max-width: 767px) {
+    .github-icon {
+      font-size: 32px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .github-icon {
+      gap: 30px;
+    }
   }
   .github-icon:hover {
     top: -4px;
@@ -212,6 +272,16 @@ const BottomBox = styled.div`
     padding: 0 5px;
     transition: all 0.3s;
     height: fit-content;
+  }
+  @media screen and (max-width: 767px) {
+    .blog-icon {
+      font-size: 20px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .blog-icon {
+      font-size: 18px;
+    }
   }
   .blog-icon:hover {
     top: -4px;
@@ -414,15 +484,15 @@ export default function Home() {
           // data-aos-delay="200"
         >
           <TopBox className="main-box">
-            {/* <h2
-              className="title"
-              data-aos="fade-in"
-              data-aos-duration="1400"
-              data-aos-easing="ease-in-out"
-              data-aos-delay="100"
+            <h2
+              className="title tablet-mobile-title"
+              // data-aos="fade-in"
+              // data-aos-duration="1400"
+              // data-aos-easing="ease-in-out"
+              // data-aos-delay="100"
             >
               CHOHYANG
-            </h2> */}
+            </h2>
             <SVG
               width="890px"
               height="180px"
@@ -472,7 +542,8 @@ export default function Home() {
               프론트앤드 개발 공부를 기록으로 남기고 있습니다.
             </p> */}
               <span className="highlight-text">
-                엉덩이 오래 붙드는 웹퍼블리셔 김초향의 성장 이야기를 들어보세요.
+                &nbsp; 엉덩이 오래 붙드는 웹퍼블리셔 김초향의 성장 이야기를
+                들어보세요.
               </span>
             </p>
 
