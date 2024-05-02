@@ -9,6 +9,7 @@ import x2y2 from "../../assets/images//landing-page/x2y2_mockup.jpg";
 import chanel from "../../assets/images//landing-page/chanel_mockup.jpg";
 import knb from "../../assets/images//landing-page/knb_mockup.jpg";
 import kawa from "../../assets/images//landing-page/kawa_mockup.jpg";
+import title from "../../assets/images/comm/title.png";
 import Desc from "../../components/Desc";
 import DescLine from "../../components/DescLine";
 import DescLineInner from "../../components/DescLineInner";
@@ -74,8 +75,8 @@ const TopBox = styled.div`
   @media screen and (max-width: 1024px) {
     .tablet-mobile-title {
       display: block;
-      width: fit-content;
-      height: 170px;
+      width: 710px;
+      height: 130px;
       font-size: 130px;
       font-weight: 300;
       letter-spacing: -2px;
@@ -87,7 +88,7 @@ const TopBox = styled.div`
     .tablet-mobile-title {
       display: block;
       width: 450px;
-      height: 110px;
+      height: 90px;
       font-size: 84px;
       font-weight: 300;
       letter-spacing: -2px;
@@ -97,8 +98,8 @@ const TopBox = styled.div`
   @media screen and (max-width: 480px) {
     .tablet-mobile-title {
       display: block;
-      width: fit-content;
-      height: 90px;
+      width: 340px;
+      height: 70px;
       font-size: 60px;
       font-weight: 300;
       letter-spacing: -2px;
@@ -132,7 +133,7 @@ const TopBox = styled.div`
     color: var(--primary);
     font-weight: 400;
   }
-  img {
+  .arr {
     height: 100px;
     margin-top: 48px;
     position: relative;
@@ -140,17 +141,17 @@ const TopBox = styled.div`
     animation: arrAni 0.8s linear infinite alternate;
   }
   @media screen and (max-width: 1024px) {
-    img {
+    .arr {
       height: 90px;
     }
   }
   @media screen and (max-width: 768px) {
-    img {
+    .arr {
       height: 70px;
     }
   }
   @media screen and (max-width: 480px) {
-    img {
+    .arr {
       height: 60px;
     }
   }
@@ -491,7 +492,8 @@ export default function Home() {
               // data-aos-easing="ease-in-out"
               // data-aos-delay="100"
             >
-              CHOHYANG
+              {/* CHOHYANG */}
+              <img src={title} alt="chohyang" />
             </h2>
             <SVG
               width="890px"
@@ -549,6 +551,7 @@ export default function Home() {
 
             <img
               src={arr}
+              className="arr"
               alt="화살표"
               data-aos="fade-in"
               data-aos-duration="1000"
