@@ -26,6 +26,11 @@ const Box = styled.div`
     justify-content: flex-end;
     align-items: flex-end;
   }
+  @media screen and (max-width: 890px) {
+    .inner {
+      height: auto;
+    }
+  }
   .left {
     position: absolute;
     left: 0;
@@ -34,6 +39,27 @@ const Box = styled.div`
     flex-direction: column;
     gap: 24px;
     /* align-items: center; */
+  }
+  @media screen and (max-width: 890px) {
+    .left {
+      height: 370px;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .left {
+      height: 350px;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .left {
+      height: 280px;
+      display: flex;
+      justify-content: flex-end;
+    }
   }
   .name {
     font-weight: 400;
@@ -44,12 +70,22 @@ const Box = styled.div`
     letter-spacing: -2px;
     /* letter-spacing: -1px; */
   }
+  @media screen and (max-width: 890px) {
+    .name {
+      display: none;
+    }
+  }
   .line {
     width: 1px;
     height: 140px;
     /* height: 150px; */
     margin-left: 23px;
     background: white;
+  }
+  @media screen and (max-width: 890px) {
+    .line {
+      display: none;
+    }
   }
   .icon-box {
     display: flex;
@@ -59,6 +95,11 @@ const Box = styled.div`
     gap: 24px;
     width: fit-content;
   }
+  @media screen and (max-width: 767px) {
+    .icon-box {
+      gap: 10px;
+    }
+  }
   .github-icon {
     font-size: 36px;
     position: relative;
@@ -66,6 +107,16 @@ const Box = styled.div`
     transition: all 0.3s;
     width: fit-content;
     height: fit-content;
+  }
+  @media screen and (max-width: 767px) {
+    .github-icon {
+      font-size: 32px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .github-icon {
+      gap: 30px;
+    }
   }
   .github-icon:hover {
     top: -4px;
@@ -81,6 +132,16 @@ const Box = styled.div`
     transition: all 0.3s;
     height: fit-content;
   }
+  @media screen and (max-width: 767px) {
+    .blog-icon {
+      font-size: 20px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .blog-icon {
+      font-size: 18px;
+    }
+  }
   .blog-icon:hover {
     top: -4px;
     border-radius: 10px;
@@ -92,20 +153,28 @@ const GnbBox = styled.div`
   flex-direction: column;
   li {
     height: 90px;
-    /* height: 100px; */
     text-align: right;
     font-size: 78px;
-    /* font-size: 86px; */
     font-weight: 700;
     color: transparent;
-    /* text-shadow: -1.5px -1.5px 0 white, 1.5px -1.5px 0 white,
-      -1.5px 1.5px 0 white, 1.5px 1.5px 0 white; */
     background: linear-gradient(to right, white, white) no-repeat;
     background-clip: text;
     -webkit-background-clip: text;
     letter-spacing: -1px;
     background-size: 0%;
     transition: all 0.8s cubic-bezier(0.1, 0.5, 0.5, 1);
+  }
+  @media screen and (max-width: 768px) {
+    li {
+      height: 85px;
+      font-size: 70px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    li {
+      height: 70px;
+      font-size: 50px;
+    }
   }
   a {
     display: flex;
@@ -137,10 +206,30 @@ const GnbBox = styled.div`
     transform: scale(1);
     width: 240px;
   }
+  @media screen and (max-width: 768px) {
+    li:hover .inner-line {
+      width: 150px;
+    }
+  }
+  @media screen and (max-width: 580px) {
+    .inner-line {
+      display: none;
+    }
+  }
   .arr-icon {
     color: white;
     font-size: 48px;
     padding-bottom: 28px;
+  }
+  @media screen and (max-width: 768px) {
+    .arr-icon {
+      font-size: 40px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .arr-icon {
+      font-size: 36px;
+    }
   }
 `;
 
