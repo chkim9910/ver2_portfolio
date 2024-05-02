@@ -56,7 +56,7 @@ const Box = styled.div`
   }
   @media screen and (max-width: 480px) {
     .left {
-      height: 280px;
+      height: 300px;
       display: flex;
       justify-content: flex-end;
     }
@@ -173,7 +173,7 @@ const GnbBox = styled.div`
   @media screen and (max-width: 480px) {
     li {
       color: rgba(255, 255, 255, 0.5);
-      height: 70px;
+      height: 75px;
       font-size: 50px;
     }
   }
@@ -183,6 +183,11 @@ const GnbBox = styled.div`
     justify-content: flex-end;
     gap: 30px;
     -webkit-text-stroke: 1px white;
+  }
+  @media screen and (max-width: 480px) {
+    a {
+      -webkit-text-stroke: 0px white;
+    }
   }
   li:hover {
     background: linear-gradient(to right, white, white) no-repeat;
@@ -201,6 +206,11 @@ const GnbBox = styled.div`
     font-size: 16px;
     -webkit-text-stroke: 0px white;
     font-family: "Noto Sans KR", sans-serif;
+  }
+  @media screen and (max-width: 480px) {
+    span {
+      color: rgba(255, 255, 255, 0.5);
+    }
   }
   .inner-line {
     height: 1px;
