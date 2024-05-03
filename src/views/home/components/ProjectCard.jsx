@@ -37,6 +37,11 @@ const Inner = styled.div`
     font-size: 26px;
     font-weight: 500;
   }
+  @media screen and (max-width: 480px) {
+    .name {
+      font-size: 24px;
+    }
+  }
   .arr-icon {
     font-size: 36px;
   }

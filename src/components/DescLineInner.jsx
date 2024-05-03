@@ -5,6 +5,9 @@ const ContInner = styled.div`
   margin-top: 16px;
   width: 100%;
   display: flex;
+  @media screen and (max-width: 768px) {
+    margin-top: 8px;
+  }
 
   .content {
     flex: 1;
@@ -16,6 +19,11 @@ const ContInner = styled.div`
     border-bottom: 1px solid var(--primary);
     padding: 2px 0;
     color: var(--primary);
+  }
+  @media screen and (max-width: 480px) {
+    .cont-title {
+      font-size: 16px;
+    }
   }
 `;
 

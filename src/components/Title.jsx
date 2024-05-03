@@ -14,6 +14,16 @@ const Inner = styled.div`
     height: 30px;
     color: var(--primary);
   }
+  @media screen and (max-width: 768px) {
+    .title {
+      font-size: 22px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .title {
+      font-size: 20px;
+    }
+  }
 `;
 const Line = styled.span`
   ${tw`w-5 h-px`}

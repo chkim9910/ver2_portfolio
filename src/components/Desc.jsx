@@ -15,6 +15,18 @@ const Inner = styled.div`
     font-weight: ${(props) => (props.ftweight === "500" ? 500 : 400)};
     word-break: keep-all;
   }
+  @media screen and (max-width: 768px) {
+    .inner {
+      margin-top: 8px;
+      font-size: 16px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .inner {
+      margin-top: 4px;
+      font-size: 14px;
+    }
+  }
 `;
 
 export default function Desc(props) {

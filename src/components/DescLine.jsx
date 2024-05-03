@@ -10,6 +10,12 @@ const Inner = styled.div`
     display: flex;
     width: 100%;
   }
+  @media screen and (max-width: 768px) {
+    .cont-box {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
 `;
 
 export default function DescLine(props) {

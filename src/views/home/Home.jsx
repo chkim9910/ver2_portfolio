@@ -44,6 +44,11 @@ const Wrap = styled.div`
   .section4 {
     margin-top: 120px;
   }
+  @media screen and (max-width: 768px) {
+    .section4 {
+      margin-top: 60px;
+    }
+  }
   .num {
     display: flex;
     align-items: center;
@@ -300,6 +305,22 @@ const Sect2Inner = styled.div`
     color: var(--primary);
     font-weight: 300;
     line-height: 130%;
+    word-break: keep-all;
+  }
+  @media screen and (max-width: 768px) {
+    .title {
+      font-size: 32px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .title {
+      font-size: 30px;
+    }
+  }
+  @media screen and (max-width: 360px) {
+    .title {
+      font-size: 24px;
+    }
   }
   .intro {
     font-family: "Noto Sans KR", sans-serif;
@@ -314,9 +335,25 @@ const Sect2IllustBox = styled.div`
   top: 198px;
   right: 0;
   width: 420px;
+  @media screen and (max-width: 976px) {
+    width: 370px;
+    right: -40px;
+  }
+  @media screen and (max-width: 480px) {
+    width: 330px;
+    top: 108px;
+  }
+  @media screen and (max-width: 360px) {
+    display: none;
+  }
   .illust {
     position: absolute;
     z-index: 10;
+  }
+  @media screen and (max-width: 976px) {
+    .illust {
+      display: none;
+    }
   }
   .circle-big {
     width: 270px;
@@ -328,6 +365,22 @@ const Sect2IllustBox = styled.div`
     left: -40px;
     z-index: 1;
   }
+  @media screen and (max-width: 976px) {
+    .circle-big {
+      width: 220px;
+      height: 220px;
+      left: 42px;
+      top: 20px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .circle-big {
+      width: 130px;
+      height: 130px;
+      left: 102px;
+      top: 50px;
+    }
+  }
   .circle-medium {
     width: 160px;
     height: 160px;
@@ -338,6 +391,22 @@ const Sect2IllustBox = styled.div`
     right: 60px;
     z-index: 0;
   }
+  @media screen and (max-width: 976px) {
+    .circle-medium {
+      width: 110px;
+      height: 110px;
+      top: -10px;
+      right: 50px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .circle-medium {
+      width: 70px;
+      height: 70px;
+      top: 45px;
+      right: 50px;
+    }
+  }
   .circle-small {
     width: 54px;
     height: 54px;
@@ -346,6 +415,18 @@ const Sect2IllustBox = styled.div`
     position: absolute;
     top: 300px;
     right: 40px;
+  }
+  @media screen and (max-width: 976px) {
+    .circle-small {
+      top: 240px;
+    }
+  }
+  @media screen and (max-width: 976px) {
+    .circle-small {
+      width: 30px;
+      height: 30px;
+      top: 170px;
+    }
   }
 `;
 const Sect3Inner = styled.div`
@@ -356,10 +437,22 @@ const Sect3Inner = styled.div`
   flex-wrap: wrap;
   gap: 40px;
   margin-top: 120px;
+  @media screen and (max-width: 1024px) {
+    margin-top: 40px;
+    gap: 0px;
+  }
   .inner {
     display: flex;
     gap: 40px;
     width: 85%;
+  }
+  @media screen and (max-width: 1024px) {
+    .inner {
+      margin-top: 16px;
+      flex-direction: column;
+      width: 100%;
+      gap: 16px;
+    }
   }
 `;
 const Sect4Inner = styled.div`
@@ -371,6 +464,14 @@ const Sect4Inner = styled.div`
     left: -3.333vw;
     width: calc(100% + 6.666vw);
   }
+  @media screen and (max-width: 768px) {
+    left: -28px;
+    width: 100vw;
+  }
+  @media screen and (max-width: 480px) {
+    left: -16px;
+    width: 100vw;
+  }
   .inner-box {
     display: flex;
     flex-direction: column;
@@ -380,17 +481,49 @@ const Sect4Inner = styled.div`
     margin: 0 auto;
     max-width: 1280px;
     padding: 120px;
-    /*  */
+  }
+  @media screen and (max-width: 768px) {
+    .inner-box {
+      gap: 16px;
+      padding: 120px 3.333vw;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .inner-box {
+      gap: 12px;
+    }
   }
   .title {
     font-size: 56px;
     font-weight: 500;
     height: 80px;
   }
+  @media screen and (max-width: 768px) {
+    .title {
+      font-size: 48px;
+      height: 60px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .title {
+      font-size: 36px;
+      height: 45px;
+    }
+  }
   .sub-title {
     font-size: 16px;
     font-weight: 400;
     font-family: "Noto Sans KR", sans-serif;
+  }
+  @media screen and (max-width: 768px) {
+    .sub-title {
+      font-size: 14px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .sub-title {
+      font-size: 12px;
+    }
   }
   .pdf-box {
     width: 184px;
@@ -402,6 +535,16 @@ const Sect4Inner = styled.div`
   .pdf-text {
     font-size: 20px;
     font-weight: 400;
+  }
+  @media screen and (max-width: 768px) {
+    .pdf-text {
+      font-size: 16px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .pdf-text {
+      font-size: 14px;
+    }
   }
   .download-icon {
     font-size: 20px;
@@ -417,9 +560,31 @@ const Sect5Inner = styled.div`
     font-size: 16px;
     font-weight: 400;
   }
+  @media screen and (max-width: 768px) {
+    .sub-text {
+      font-size: 14px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .sub-text {
+      font-size: 12px;
+    }
+  }
   .main-text {
     font-size: 70px;
     height: 100px;
+  }
+  @media screen and (max-width: 768px) {
+    .main-text {
+      font-size: 56px;
+      height: 80px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .main-text {
+      font-size: 36px;
+      height: 55px;
+    }
   }
   .addr,
   .kakao {
@@ -434,6 +599,18 @@ const Sect5Inner = styled.div`
     transition: all 0.3s;
     position: relative;
     margin-bottom: 5px;
+  }
+  @media screen and (max-width: 768px) {
+    .addr,
+    .kakao {
+      font-size: 18px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .addr,
+    .kakao {
+      font-size: 15px;
+    }
   }
   .addr::after,
   .kakao::after {
@@ -463,6 +640,16 @@ const FooterInner = styled.div`
   .copyright {
     font-size: 14px;
     font-weight: 400;
+  }
+  @media screen and (max-width: 767px) {
+    .copyright {
+      font-size: 12px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .copyright {
+      font-size: 10px;
+    }
   }
 `;
 
