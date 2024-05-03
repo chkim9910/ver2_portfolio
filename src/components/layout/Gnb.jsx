@@ -10,7 +10,7 @@ const Box = styled.div`
   position: fixed;
   top: ${(props) => (props.isOpen ? "0" : "-100%")};
   /* height: 100%; */
-  height: ${(props) => (props.isOpen ? "100svh" : "100%")};
+  height: ${(props) => (props.isOpen ? "100vh" : "100%")};
   left: 0;
   right: 0;
   transition: all 0.6s ease-in-out;

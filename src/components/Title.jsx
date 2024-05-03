@@ -51,7 +51,7 @@ const SubpageInner = styled.div`
   width: 100%;
   height: 100svh;
   @media screen and (max-width: 768px) {
-    height: 70svh;
+    height: 50svh;
   }
   .inner {
     width: fit-content;
