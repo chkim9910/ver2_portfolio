@@ -22,6 +22,7 @@ const Box = styled.div`
     padding-top: 30px;
   }
   @media screen and (max-width: 480px) {
+    width: 100vw;
     padding: 0 16px;
     padding-top: 30px;
   }

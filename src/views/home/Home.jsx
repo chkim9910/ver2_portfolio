@@ -482,7 +482,7 @@ const Sect4Inner = styled.div`
     max-width: 1280px;
     padding: 120px;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     .inner-box {
       gap: 16px;
       padding: 120px 3.333vw;
@@ -574,7 +574,7 @@ const Sect5Inner = styled.div`
     font-size: 70px;
     height: 100px;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     .main-text {
       font-size: 56px;
       height: 80px;

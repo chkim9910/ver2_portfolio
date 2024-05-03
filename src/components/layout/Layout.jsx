@@ -12,9 +12,11 @@ const Box = styled.div`
     overflow: hidden;
   }
   @media screen and (min-width: 480px) and (max-width: 768px) {
+    overflow-x: hidden;
     padding: 0 28px;
   }
   @media screen and (max-width: 480px) {
+    overflow-x: hidden;
     padding: 0 16px;
   }
 `;
