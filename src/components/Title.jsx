@@ -56,6 +56,18 @@ const SubpageInner = styled.div`
     letter-spacing: 15px;
     font-weight: 400;
   }
+  @media screen and (max-width: 768px) {
+    .top {
+      font-size: 14px;
+      letter-spacing: 10px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .top {
+      font-size: 10px;
+      letter-spacing: 6px;
+    }
+  }
   .title {
     font-size: 100px;
     /* font-weight: 300; */
@@ -63,7 +75,48 @@ const SubpageInner = styled.div`
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    white-space: nowrap;
     /* height: 130px; */
+  }
+  @media screen and (max-width: 1279px) {
+    .title {
+      font-size: 80px;
+    }
+  }
+  @media screen and (max-width: 1070px) {
+    .title {
+      font-size: 70px;
+    }
+  }
+  @media screen and (max-width: 893px) {
+    .title {
+      font-size: 60px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .title {
+      font-size: 50px;
+    }
+  }
+  @media screen and (max-width: 648px) {
+    .title {
+      font-size: 38px;
+    }
+  }
+  @media screen and (max-width: 510px) {
+    .title {
+      font-size: 32px;
+    }
+  }
+  @media screen and (max-width: 410px) {
+    .title {
+      font-size: 28px;
+    }
+  }
+  @media screen and (max-width: 380px) {
+    .title {
+      font-size: 26px;
+    }
   }
   .highlight {
     font-weight: 500;
@@ -76,6 +129,18 @@ const SubpageInner = styled.div`
     display: flex;
     justify-content: flex-end;
     transform: translateX(13px);
+  }
+  @media screen and (max-width: 768px) {
+    .bottom {
+      font-size: 14px;
+      letter-spacing: 12px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .bottom {
+      font-size: 10px;
+      letter-spacing: 8px;
+    }
   }
 `;
 
