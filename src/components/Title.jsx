@@ -50,9 +50,9 @@ const SubpageInner = styled.div`
   justify-content: center;
   width: 100%;
   height: 100svh;
-  @media screen and (max-width: 768px) {
-    height: 50svh;
-  }
+  /* @media screen and (max-width: 768px) {
+    height: 100svh;
+  } */
   .inner {
     width: fit-content;
   }
