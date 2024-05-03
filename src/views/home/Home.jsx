@@ -726,7 +726,7 @@ export default function Home() {
             <p
               className="desc"
               data-aos="fade-in"
-              data-aos-duration="2000"
+              data-aos-duration="1300"
               data-aos-easing="ease-in-out"
               data-aos-delay="2000"
             >
