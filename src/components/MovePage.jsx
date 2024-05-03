@@ -11,6 +11,12 @@ const Inner = styled.div`
     display: flex;
     gap: 20px;
     position: relative;
+    @media screen and (max-width: 530px) {
+      gap: 12px;
+    }
+    @media screen and (max-width: 480px) {
+      gap: 10px;
+    }
   }
   .left:hover {
     animation: left 0.5s linear infinite alternate;
@@ -41,13 +47,38 @@ const Inner = styled.div`
     font-size: 26px;
     font-weight: 500;
     height: 32px;
+    @media screen and (max-width: 768px) {
+      font-size: 24px;
+    }
+    @media screen and (max-width: 530px) {
+      font-size: 20px;
+      height: 24px;
+    }
+    @media screen and (max-width: 480px) {
+      font-size: 18px;
+      height: 23px;
+    }
   }
   .sub-text {
     font-size: 14px;
     width: fit-content;
+    @media screen and (max-width: 530px) {
+      font-size: 12px;
+    }
+    @media screen and (max-width: 480px) {
+      font-size: 10px;
+    }
   }
   .arr-icon {
     font-size: 42px !important;
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 768px) {
+      font-size: 36px !important;
+    }
+    @media screen and (max-width: 480px) {
+      font-size: 24px !important;
+    }
   }
   .text-box {
     display: flex;

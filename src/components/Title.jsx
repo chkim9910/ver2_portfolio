@@ -17,11 +17,13 @@ const Inner = styled.div`
   @media screen and (max-width: 768px) {
     .title {
       font-size: 22px;
+      height: 25px;
     }
   }
   @media screen and (max-width: 480px) {
     .title {
       font-size: 20px;
+      height: 22px;
     }
   }
 `;
@@ -48,6 +50,9 @@ const SubpageInner = styled.div`
   justify-content: center;
   width: 100%;
   height: 100svh;
+  @media screen and (max-width: 768px) {
+    height: 70svh;
+  }
   .inner {
     width: fit-content;
   }
@@ -95,6 +100,22 @@ const SubpageInner = styled.div`
   }
   @media screen and (max-width: 768px) {
     .title {
+      font-size: 56px;
+    }
+  }
+  @media screen and (max-width: 560px) {
+    .title {
+      font-size: 48px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .title {
+      font-size: 32px;
+    }
+  }
+  /* 
+  @media screen and (max-width: 768px) {
+    .title {
       font-size: 50px;
     }
   }
@@ -117,7 +138,7 @@ const SubpageInner = styled.div`
     .title {
       font-size: 26px;
     }
-  }
+  } */
   .highlight {
     font-weight: 500;
   }

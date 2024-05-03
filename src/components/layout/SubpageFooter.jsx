@@ -6,6 +6,7 @@ const Inner = styled.div`
   margin-top: 120px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: relative;
   left: calc((100vw - 1280px) / -2);
   width: 100vw;
@@ -18,23 +19,52 @@ const Inner = styled.div`
   .copyright {
     font-size: 14px;
     font-weight: 400;
+    height: 100%;
+  }
+  @media screen and (max-width: 767px) {
+    .copyright {
+      font-size: 12px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .copyright {
+      font-size: 10px;
+    }
   }
   .icon-box {
     display: flex;
     align-items: center;
     gap: 24px;
     font-size: 36px;
+    @media screen and (max-width: 768px) {
+      gap: 16px;
+    }
+    @media screen and (max-width: 480px) {
+      gap: 12px;
+    }
   }
   .icon {
     position: relative;
     top: 0;
     transition: all 0.3s;
+    @media screen and (max-width: 768px) {
+      font-size: 36px;
+    }
+    @media screen and (max-width: 480px) {
+      font-size: 32px;
+    }
   }
   .icon:hover {
     top: -4px;
   }
   .figma-icon {
     font-size: 32px;
+    @media screen and (max-width: 768px) {
+      font-size: 32px;
+    }
+    @media screen and (max-width: 480px) {
+      font-size: 28px;
+    }
   }
 `;
 

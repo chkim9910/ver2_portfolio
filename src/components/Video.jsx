@@ -9,13 +9,42 @@ const Inner = styled.div`
   align-items: center;
   margin-bottom: 80px;
   margin-top: 16px;
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 50px;
+  }
   .video-desc {
     flex: 1;
+    @media screen and (max-width: 900px) {
+      flex: none;
+      width: 100%;
+    }
   }
   .video-box {
     flex: 1;
     height: 500px;
     position: relative;
+    @media screen and (max-width: 900px) {
+      flex: none;
+      width: 55%;
+      height: 340px;
+    }
+    @media screen and (max-width: 786px) {
+      width: 65%;
+      height: 340px;
+    }
+    @media screen and (max-width: 600px) {
+      width: 75%;
+      height: 340px;
+    }
+    @media screen and (max-width: 480px) {
+      height: 280px;
+    }
+    @media screen and (max-width: 415px) {
+      height: 230px;
+    }
   }
   .mac-mockup {
     position: absolute;
@@ -23,6 +52,15 @@ const Inner = styled.div`
     z-index: 10;
     height: 500px;
     width: 100%;
+    @media screen and (max-width: 900px) {
+      height: 340px;
+    }
+    @media screen and (max-width: 480px) {
+      height: 280px;
+    }
+    @media screen and (max-width: 415px) {
+      height: 230px;
+    }
   }
   video {
     /* height: 385px; */

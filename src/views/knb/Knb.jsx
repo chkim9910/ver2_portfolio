@@ -30,6 +30,20 @@ const Inner = styled.div`
       left: -3.333vw;
     }
   }
+  @media screen and (max-width: 768px) {
+    .mockup-img {
+      height: 70svh;
+      left: -28px;
+      width: 100vw;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .mockup-img {
+      height: 47svh;
+      left: -16px;
+      width: 100vw;
+    }
+  }
   .intro-li {
     display: flex;
     flex-direction: column;
@@ -88,6 +102,9 @@ const LinkInner = styled.div`
     padding: 8px 30px;
     transition: all 0.3s;
     position: relative;
+    @media screen and (max-width: 768px) {
+      padding: 8px 12px;
+    }
   }
   .link-to-page:hover {
     color: white;
@@ -114,6 +131,9 @@ const LinkInner = styled.div`
     margin-top: 0;
     position: relative;
     z-index: 2;
+    @media screen and (max-width: 480px) {
+      font-size: 14px;
+    }
   }
   .arr-icon {
     font-size: 20px;
@@ -132,7 +152,9 @@ export default function Knb() {
     <>
       <Inner>
         <SubpageTitle>국립발레단</SubpageTitle>
-        <div className="mockup-img"></div>
+        <div className="mockup-box">
+          <div className="mockup-img"></div>
+        </div>
         <div
           className="desc"
           data-aos="fade-up"

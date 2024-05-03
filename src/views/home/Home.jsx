@@ -636,7 +636,6 @@ const Footer = styled.footer`
 `;
 const FooterInner = styled.div`
   padding: 120px 3.33vw 30px;
-  /* width: 100%; */
   .copyright {
     font-size: 14px;
     font-weight: 400;

@@ -36,6 +36,16 @@ const Inner = styled.div`
       width: 100vw;
       left: -3.333vw;
     }
+    @media screen and (max-width: 768px) {
+      height: 70svh;
+      left: -28px;
+      width: 100vw;
+    }
+    @media screen and (max-width: 480px) {
+      height: 47svh;
+      left: -16px;
+      width: 100vw;
+    }
   }
   .mockup-img {
     width: 120%;
@@ -43,6 +53,12 @@ const Inner = styled.div`
     background: url(${mockup}) no-repeat 0% 30% / 105%;
     transform: rotate(-16deg) translate(-130px, 20px);
     overflow-x: hidden;
+    @media screen and (max-width: 768px) {
+      transform: rotate(-16deg) translate(-70px, 20px);
+    }
+    @media screen and (max-width: 480px) {
+      transform: rotate(-16deg) translate(-50px, -10px);
+    }
   }
   .intro-li {
     display: flex;
@@ -102,6 +118,9 @@ const LinkInner = styled.div`
     padding: 8px 30px;
     transition: all 0.3s;
     position: relative;
+    @media screen and (max-width: 768px) {
+      padding: 8px 12px;
+    }
   }
   .link-to-page:hover {
     color: white;
@@ -128,6 +147,9 @@ const LinkInner = styled.div`
     margin-top: 0;
     position: relative;
     z-index: 2;
+    @media screen and (max-width: 480px) {
+      font-size: 14px;
+    }
   }
   .arr-icon {
     font-size: 20px;
