@@ -333,7 +333,11 @@ export default function Gnb(props) {
                 </Link>
               </li>
               <li>
-                <a href="/" download="resume.pdf">
+                <a
+                  href="/"
+                  download="resume.pdf"
+                  onClick={(e) => e.preventDefault()}
+                >
                   RESUME
                   <span className="arr-icon">
                     <MdArrowOutward />

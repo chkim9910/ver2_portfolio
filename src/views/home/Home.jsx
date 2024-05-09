@@ -945,7 +945,12 @@ export default function Home() {
                 <h2 className="title">resume</h2>
                 <p className="sub-title">더 많은 정보를 확인해보세요.</p>
               </div>
-              <a href="/" download="resume.pdf" className="pdf-box">
+              <a
+                href="/"
+                download="resume.pdf"
+                className="pdf-box"
+                onClick={(e) => e.preventDefault()}
+              >
                 <span className="pdf-text">PDF Download</span>
                 <span className="download-icon">
                   <GrDownload />
