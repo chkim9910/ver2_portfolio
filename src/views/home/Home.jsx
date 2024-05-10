@@ -804,7 +804,7 @@ export default function Home() {
               <span>FOR THE NEXT STEP</span>
               <span className="intro">
                 집념과 책임감으로 <br />
-                일하는 웹퍼블리셔 김초향입니다.
+                업무에 임하는 퍼블리셔 김초향입니다.
               </span>
             </h2>
             <div className="desc">
